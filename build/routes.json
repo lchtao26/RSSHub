@@ -54455,7 +54455,7 @@
             ]
           }
         ],
-        "name": "音乐人 - 演出更新",
+        "name": "按音乐人 - 演出更新",
         "maintainers": [
           "lchtao26"
         ],
@@ -54486,7 +54486,7 @@
             ]
           }
         ],
-        "name": "厂牌 - 演出更新",
+        "name": "按厂牌 - 演出更新",
         "maintainers": [
           "lchtao26"
         ],
@@ -54511,7 +54511,7 @@
           "supportPodcast": false,
           "supportScihub": false
         },
-        "name": "演出更新",
+        "name": "按城市 - 演出更新",
         "maintainers": [
           "lchtao26"
         ],
@@ -54541,6 +54541,37 @@
           "lchtao26"
         ],
         "location": "search.ts"
+      },
+      "/site/:siteId": {
+        "path": "/site/:siteId",
+        "categories": [
+          "shopping"
+        ],
+        "example": "/showstart/site/3583",
+        "parameters": {
+          "siteId": "演出场地 (编号)"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.showstart.com/venue/:id"
+            ]
+          }
+        ],
+        "name": "按场地 - 演出更新",
+        "maintainers": [
+          "lchtao26"
+        ],
+        "description": ":::tip\n-   演出场地 ID 查询: `/showstart/search/site/:keyword`, 如: [https://rsshub.app/showstart/search/site/酒球会](https://rsshub.app/showstart/search/site/酒球会)\n:::",
+        "location": "site.ts"
       }
     },
     "name": "秀动网",
