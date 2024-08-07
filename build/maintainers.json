@@ -78,11 +78,11 @@
   "/0x80/blog": [
     "xnum"
   ],
-  "/141jav/{.*}?": [
+  "/141jav/:type/:keyword{.*}?": [
     "cgkings",
     "nczitzk"
   ],
-  "/141ppv/{.*}?": [
+  "/141ppv/:type/:keyword{.*}?": [
     "cgkings",
     "nczitzk"
   ],
@@ -186,6 +186,9 @@
   ],
   "/51cto/index/recommend": [
     "cnkmmk"
+  ],
+  "/51read/article/:id": [
+    "lazwa34"
   ],
   "/52hrtt/:area?/:type?": [
     "nczitzk"
@@ -2339,6 +2342,9 @@
   ],
   "/google/news/:category/:locale": [
     "zoenglinghou"
+  ],
+  "/google/research": [
+    "Levix"
   ],
   "/google/scholar/:query": [
     "HenryQW"
@@ -5834,6 +5840,9 @@
   ],
   "/tgbus/list/:category": [
     "Xzonn"
+  ],
+  "/the/:filter{.+}?": [
+    "nczitzk"
   ],
   "/theatlantic/:category": [
     "EthanWng97"
