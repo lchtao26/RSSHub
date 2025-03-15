@@ -11126,6 +11126,14 @@
           "/search/book/:wd"
         ],
         "target": "/duozhuayu/search/:wd"
+      },
+      {
+        "title": "标签",
+        "docs": "https://docs.rsshub.app/routes/shopping",
+        "source": [
+          "/tag/:id"
+        ],
+        "target": "/duozhuayu/tags/:id"
       }
     ]
   },

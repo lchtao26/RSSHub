@@ -2161,6 +2161,9 @@
   "/duozhuayu/search/:wd": [
     "fengkx"
   ],
+  "/duozhuayu/tags/:id": [
+    "fengkx"
+  ],
   "/dushu/fuzhou": [
     "Fatpandac"
   ],

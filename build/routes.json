@@ -27727,11 +27727,42 @@
           "fengkx"
         ],
         "location": "search.ts"
+      },
+      "/tags/:id": {
+        "path": "/tags/:id",
+        "categories": [
+          "shopping"
+        ],
+        "example": "/duozhuayu/tags/960494709850119556",
+        "parameters": {
+          "id": "标签 ID，可在 URL 中找到"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": true,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "duozhuayu.com/tag/:id"
+            ]
+          }
+        ],
+        "name": "标签",
+        "maintainers": [
+          "fengkx"
+        ],
+        "location": "tag.ts"
       }
     },
     "name": "多抓鱼",
     "url": "duozhuayu.com",
-    "lang": "zh-CN"
+    "lang": "zh-CN",
+    "description": ":::tip\n官方提供了少量 RSS: [https://www.duozhuayu.com/rss](https://www.duozhuayu.com/rss)\n:::"
   },
   "dushu": {
     "routes": {
