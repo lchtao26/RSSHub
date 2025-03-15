@@ -55388,6 +55388,31 @@
     "url": "liulinblog.com",
     "lang": "zh-CN"
   },
+  "livestart": {
+    "routes": {
+      "/:city/:keyword?": {
+        "path": "/:city/:keyword?",
+        "categories": [
+          "shopping"
+        ],
+        "example": "/livestart/上海",
+        "parameters": {
+          "city": "城市",
+          "keyword": "关键词"
+        },
+        "name": "演出更新",
+        "maintainers": [
+          "lchtao26"
+        ],
+        "location": "index.ts"
+      }
+    },
+    "name": "LiveStart",
+    "url": "www.livestart.com.cn",
+    "categories": [
+      "shopping"
+    ]
+  },
   "liveuamap": {
     "routes": {
       "/:region?": {
