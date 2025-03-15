@@ -2158,6 +2158,15 @@
   "/duckdb/news": [
     "mocusez"
   ],
+  "/duozhuayu/book-categories/:categoryId/:subCategoryId?": [
+    "fengkx"
+  ],
+  "/duozhuayu/charts/:id": [
+    "fengkx"
+  ],
+  "/duozhuayu/new-arrivals": [
+    "fengkx"
+  ],
   "/duozhuayu/search/:wd": [
     "fengkx"
   ],

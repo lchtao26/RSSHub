@@ -11120,6 +11120,31 @@
     "_name": "多抓鱼",
     ".": [
       {
+        "title": "图书分类",
+        "docs": "https://docs.rsshub.app/routes/shopping",
+        "source": [
+          "/book-categories/:categoryId",
+          "/book-categories/:categoryId?subCategoryId=:subCategoryId"
+        ],
+        "target": "/duozhuayu/book-categories/:categoryId/:subCategoryId?"
+      },
+      {
+        "title": "榜单",
+        "docs": "https://docs.rsshub.app/routes/shopping",
+        "source": [
+          "/charts/:id"
+        ],
+        "target": "/duozhuayu/charts/:id"
+      },
+      {
+        "title": "新品上架",
+        "docs": "https://docs.rsshub.app/routes/shopping",
+        "source": [
+          "/new-arrivals"
+        ],
+        "target": "/duozhuayu/new-arrivals"
+      },
+      {
         "title": "搜索结果",
         "docs": "https://docs.rsshub.app/routes/shopping",
         "source": [

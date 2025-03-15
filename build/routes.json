@@ -27698,6 +27698,98 @@
   },
   "duozhuayu": {
     "routes": {
+      "/book-categories/:categoryId/:subCategoryId?": {
+        "path": "/book-categories/:categoryId/:subCategoryId?",
+        "categories": [
+          "shopping"
+        ],
+        "example": "/duozhuayu/book-categories/750409452376692948",
+        "parameters": {
+          "categoryId": "分类 ID，可在 URL 中找到",
+          "subCategoryId": "子分类 ID，可在 URL 中找到，可选"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": true,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "duozhuayu.com/book-categories/:categoryId",
+              "duozhuayu.com/book-categories/:categoryId?subCategoryId=:subCategoryId"
+            ],
+            "target": "/book-categories/:categoryId/:subCategoryId?"
+          }
+        ],
+        "name": "图书分类",
+        "maintainers": [
+          "fengkx"
+        ],
+        "description": ":::tip\n带有子分类的订阅格式: `/duozhuayu/book-categories/分类ID/子分类ID`\n:::\n\n例如: [科幻 - 多抓鱼](https://www.duozhuayu.com/book-categories/750409452376692948?subCategoryId=767083323578261442) 对应路由为: `/duozhuayu/book-categories/750409452376692948/767083323578261442`",
+        "location": "category.ts"
+      },
+      "/charts/:id": {
+        "path": "/charts/:id",
+        "categories": [
+          "shopping"
+        ],
+        "example": "/duozhuayu/charts/765988201625163649",
+        "parameters": {
+          "id": "榜单 ID，可在 URL 中找到"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": true,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "duozhuayu.com/charts/:id"
+            ]
+          }
+        ],
+        "name": "榜单",
+        "maintainers": [
+          "fengkx"
+        ],
+        "location": "charts.ts"
+      },
+      "/new-arrivals": {
+        "path": "/new-arrivals",
+        "categories": [
+          "shopping"
+        ],
+        "example": "/duozhuayu/new-arrivals",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": true,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "duozhuayu.com/new-arrivals"
+            ]
+          }
+        ],
+        "name": "新品上架",
+        "maintainers": [
+          "fengkx"
+        ],
+        "location": "new-arrivals.ts"
+      },
       "/search/:wd": {
         "path": "/search/:wd",
         "categories": [
