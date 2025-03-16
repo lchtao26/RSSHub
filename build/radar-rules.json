@@ -11137,12 +11137,12 @@
         "target": "/duozhuayu/charts/:id"
       },
       {
-        "title": "新品上架",
+        "title": "服饰搜索",
         "docs": "https://docs.rsshub.app/routes/shopping",
         "source": [
-          "/new-arrivals"
+          "/search/clothing/:keyword"
         ],
-        "target": "/duozhuayu/new-arrivals"
+        "target": "/duozhuayu/clothing/:keyword"
       },
       {
         "title": "搜索结果",

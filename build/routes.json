@@ -27762,13 +27762,15 @@
         ],
         "location": "charts.ts"
       },
-      "/new-arrivals": {
-        "path": "/new-arrivals",
+      "/clothing/:keyword": {
+        "path": "/clothing/:keyword",
         "categories": [
           "shopping"
         ],
-        "example": "/duozhuayu/new-arrivals",
-        "parameters": {},
+        "example": "/duozhuayu/clothing/男装",
+        "parameters": {
+          "keyword": "搜索关键词"
+        },
         "features": {
           "requireConfig": false,
           "requirePuppeteer": true,
@@ -27780,15 +27782,15 @@
         "radar": [
           {
             "source": [
-              "duozhuayu.com/new-arrivals"
+              "duozhuayu.com/search/clothing/:keyword"
             ]
           }
         ],
-        "name": "新品上架",
+        "name": "服饰搜索",
         "maintainers": [
           "fengkx"
         ],
-        "location": "new-arrivals.ts"
+        "location": "clothing.ts"
       },
       "/search/:wd": {
         "path": "/search/:wd",

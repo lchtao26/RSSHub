@@ -2164,7 +2164,7 @@
   "/duozhuayu/charts/:id": [
     "fengkx"
   ],
-  "/duozhuayu/new-arrivals": [
+  "/duozhuayu/clothing/:keyword": [
     "fengkx"
   ],
   "/duozhuayu/search/:wd": [
