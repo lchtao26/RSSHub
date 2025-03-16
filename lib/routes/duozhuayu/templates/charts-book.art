@@ -1,0 +1,6 @@
+<img src="{{ item.imgUrl }}"><br>
+书名：{{ item.title }}<br>
+作者：{{ item.author }}<br>
+出版社：{{ item.publisher }}<br>
+出版时间：{{ item.publishDate }}<br>
+价格：{{ item.price }}<br>

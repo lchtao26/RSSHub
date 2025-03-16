@@ -1,0 +1,6 @@
+<img src="{{ item.imgUrl }}"><br>
+品牌：{{ item.brand }}<br>
+名称：{{ item.title }}<br>
+价格：{{ item.price }}<br>
+{{ if item.discount }}<p>折扣：{{ item.discount }}</p>{{ /if }}
+{{ if item.recommendSentence }}<p>{{ item.recommendSentence }}</p>{{ /if }}
