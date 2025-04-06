@@ -3617,6 +3617,51 @@
     "url": "csgo.5eplay.com",
     "lang": "zh-CN"
   },
+  "5music": {
+    "routes": {
+      "/new-releases/:category?": {
+        "path": "/new-releases/:category?",
+        "categories": [
+          "shopping"
+        ],
+        "example": "/5music/new-releases",
+        "parameters": {
+          "category": "Category, see below, defaults to all"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.5music.com.tw/New_releases.asp",
+              "www.5music.com.tw/"
+            ],
+            "target": "/new-releases"
+          }
+        ],
+        "name": "新貨上架",
+        "maintainers": [
+          "gideonsenku"
+        ],
+        "description": "Categories:\n| 華語 | 西洋 | 東洋 | 韓語 | 古典 |\n| ---- | ---- | ---- | ---- | ---- |\n| A | B | F | M | D |",
+        "url": "www.5music.com.tw/New_releases.asp",
+        "location": "index.ts"
+      }
+    },
+    "name": "五大唱片",
+    "url": "5music.com.tw",
+    "lang": "zh-TW",
+    "categories": [
+      "shopping"
+    ],
+    "description": "五大唱片是台湾五大唱片股份有限公司的简称，成立于1990年，是台湾最大的唱片公司之一。"
+  },
   "69shu": {
     "routes": {
       "/article/:id": {
@@ -4768,7 +4813,8 @@
         ],
         "name": "interest",
         "maintainers": [
-          "K33k0"
+          "K33k0",
+          "cscnk52"
         ],
         "categories": [
           "journal"
@@ -9213,6 +9259,625 @@
     "url": "www.artstation.com",
     "lang": "en"
   },
+  "asiafruitchina": {
+    "routes": {
+      "/categories/:category?": {
+        "path": "/categories/:category?",
+        "name": "果蔬品项",
+        "url": "asiafruitchina.net",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/asiafruitchina/categories/all",
+        "parameters": {
+          "category": {
+            "description": "分类，默认为 `all`，即全部，可在对应分类页 URL 中找到",
+            "options": [
+              {
+                "label": "全部",
+                "value": "all"
+              },
+              {
+                "label": "橙",
+                "value": "chengzi"
+              },
+              {
+                "label": "百香果",
+                "value": "baixiangguo"
+              },
+              {
+                "label": "菠萝/凤梨",
+                "value": "boluo"
+              },
+              {
+                "label": "菠萝蜜",
+                "value": "boluomi"
+              },
+              {
+                "label": "草莓",
+                "value": "caomei"
+              },
+              {
+                "label": "番荔枝/释迦",
+                "value": "fanlizhi"
+              },
+              {
+                "label": "番茄",
+                "value": "fanqie"
+              },
+              {
+                "label": "柑橘",
+                "value": "ganju"
+              },
+              {
+                "label": "哈密瓜",
+                "value": "hamigua"
+              },
+              {
+                "label": "核果",
+                "value": "heguo"
+              },
+              {
+                "label": "红毛丹",
+                "value": "hongmaodan"
+              },
+              {
+                "label": "火龙果",
+                "value": "huolongguo"
+              },
+              {
+                "label": "浆果",
+                "value": "jiangguo"
+              },
+              {
+                "label": "桔子",
+                "value": "juzi"
+              },
+              {
+                "label": "蓝莓",
+                "value": "lanmei"
+              },
+              {
+                "label": "梨",
+                "value": "li"
+              },
+              {
+                "label": "荔枝",
+                "value": "lizhi"
+              },
+              {
+                "label": "李子",
+                "value": "lizi"
+              },
+              {
+                "label": "榴莲",
+                "value": "liulian"
+              },
+              {
+                "label": "龙眼",
+                "value": "lognyan"
+              },
+              {
+                "label": "芦笋",
+                "value": "lusun"
+              },
+              {
+                "label": "蔓越莓",
+                "value": "manyuemei"
+              },
+              {
+                "label": "芒果",
+                "value": "mangguo"
+              },
+              {
+                "label": "猕猴桃/奇异果",
+                "value": "mihoutao"
+              },
+              {
+                "label": "柠檬",
+                "value": "ningmeng"
+              },
+              {
+                "label": "牛油果",
+                "value": "niuyouguo"
+              },
+              {
+                "label": "苹果",
+                "value": "pingguo"
+              },
+              {
+                "label": "葡萄/提子",
+                "value": "putao"
+              },
+              {
+                "label": "其他",
+                "value": "qita"
+              },
+              {
+                "label": "奇异莓",
+                "value": "qiyimei"
+              },
+              {
+                "label": "热带水果",
+                "value": "redaishuiguo"
+              },
+              {
+                "label": "山竹",
+                "value": "shanzhu"
+              },
+              {
+                "label": "石榴",
+                "value": "shiliu"
+              },
+              {
+                "label": "蔬菜",
+                "value": "shucai"
+              },
+              {
+                "label": "树莓",
+                "value": "shumei"
+              },
+              {
+                "label": "桃",
+                "value": "tao"
+              },
+              {
+                "label": "甜瓜",
+                "value": "tiangua"
+              },
+              {
+                "label": "甜椒",
+                "value": "tianjiao"
+              },
+              {
+                "label": "甜柿",
+                "value": "tianshi"
+              },
+              {
+                "label": "香蕉",
+                "value": "xiangjiao"
+              },
+              {
+                "label": "西瓜",
+                "value": "xigua"
+              },
+              {
+                "label": "西梅",
+                "value": "ximei"
+              },
+              {
+                "label": "杏",
+                "value": "xing"
+              },
+              {
+                "label": "椰子",
+                "value": "yezi"
+              },
+              {
+                "label": "杨梅",
+                "value": "yangmei"
+              },
+              {
+                "label": "樱桃",
+                "value": "yintao"
+              },
+              {
+                "label": "油桃",
+                "value": "youtao"
+              },
+              {
+                "label": "柚子",
+                "value": "youzi"
+              }
+            ]
+          }
+        },
+        "description": ":::tip\n若订阅 [橙](https://asiafruitchina.net/categories?gspx=chengzi)，网址为 `https://asiafruitchina.net/categories?gspx=chengzi`，请截取 `https://asiafruitchina.net/categories?gspx=` 到末尾的部分 `chengzi` 作为 `category` 参数填入，此时目标路由为 [`/asiafruitchina/categories/chengzi`](https://rsshub.app/asiafruitchina/categories/chengzi)。\n:::\n\n<details>\n  <summary>更多分类</summary>\n\n  | [全部](https://asiafruitchina.net/categories?gspx=all)  | [橙](https://asiafruitchina.net/categories?gspx=chengzi)        | [百香果](https://asiafruitchina.net/categories?gspx=baixiangguo)        | [菠萝/凤梨](https://asiafruitchina.net/categories?gspx=boluo) | [菠萝蜜](https://asiafruitchina.net/categories?gspx=boluomi)    |\n  | ------------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------- | --------------------------------------------------------------- |\n  | [all](https://rsshub.app/asiafruitchina/categories/all) | [chengzi](https://rsshub.app/asiafruitchina/categories/chengzi) | [baixiangguo](https://rsshub.app/asiafruitchina/categories/baixiangguo) | [boluo](https://rsshub.app/asiafruitchina/categories/boluo)   | [boluomi](https://rsshub.app/asiafruitchina/categories/boluomi) |\n\n  | [草莓](https://asiafruitchina.net/categories?gspx=caomei)     | [番荔枝/释迦](https://asiafruitchina.net/categories?gspx=fanlizhi) | [番茄](https://asiafruitchina.net/categories?gspx=fanqie)     | [柑橘](https://asiafruitchina.net/categories?gspx=ganju)    | [哈密瓜](https://asiafruitchina.net/categories?gspx=hamigua)    |\n  | ------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------- | ----------------------------------------------------------- | --------------------------------------------------------------- |\n  | [caomei](https://rsshub.app/asiafruitchina/categories/caomei) | [fanlizhi](https://rsshub.app/asiafruitchina/categories/fanlizhi)  | [fanqie](https://rsshub.app/asiafruitchina/categories/fanqie) | [ganju](https://rsshub.app/asiafruitchina/categories/ganju) | [hamigua](https://rsshub.app/asiafruitchina/categories/hamigua) |\n\n  | [核果](https://asiafruitchina.net/categories?gspx=heguo)    | [红毛丹](https://asiafruitchina.net/categories?gspx=hongmaodan)       | [火龙果](https://asiafruitchina.net/categories?gspx=huolongguo)       | [浆果](https://asiafruitchina.net/categories?gspx=jiangguo)       | [桔子](https://asiafruitchina.net/categories?gspx=juzi)   |\n  | ----------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------- |\n  | [heguo](https://rsshub.app/asiafruitchina/categories/heguo) | [hongmaodan](https://rsshub.app/asiafruitchina/categories/hongmaodan) | [huolongguo](https://rsshub.app/asiafruitchina/categories/huolongguo) | [jiangguo](https://rsshub.app/asiafruitchina/categories/jiangguo) | [juzi](https://rsshub.app/asiafruitchina/categories/juzi) |\n\n  | [蓝莓](https://asiafruitchina.net/categories?gspx=lanmei)     | [梨](https://asiafruitchina.net/categories?gspx=li)   | [荔枝](https://asiafruitchina.net/categories?gspx=lizhi)    | [李子](https://asiafruitchina.net/categories?gspx=lizi)   | [榴莲](https://asiafruitchina.net/categories?gspx=liulian)      |\n  | ------------------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------- |\n  | [lanmei](https://rsshub.app/asiafruitchina/categories/lanmei) | [li](https://rsshub.app/asiafruitchina/categories/li) | [lizhi](https://rsshub.app/asiafruitchina/categories/lizhi) | [lizi](https://rsshub.app/asiafruitchina/categories/lizi) | [liulian](https://rsshub.app/asiafruitchina/categories/liulian) |\n\n  | [龙眼](https://asiafruitchina.net/categories?gspx=lognyan)      | [芦笋](https://asiafruitchina.net/categories?gspx=lusun)    | [蔓越莓](https://asiafruitchina.net/categories?gspx=manyuemei)      | [芒果](https://asiafruitchina.net/categories?gspx=mangguo)      | [猕猴桃/奇异果](https://asiafruitchina.net/categories?gspx=mihoutao) |\n  | --------------------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------- | -------------------------------------------------------------------- |\n  | [lognyan](https://rsshub.app/asiafruitchina/categories/lognyan) | [lusun](https://rsshub.app/asiafruitchina/categories/lusun) | [manyuemei](https://rsshub.app/asiafruitchina/categories/manyuemei) | [mangguo](https://rsshub.app/asiafruitchina/categories/mangguo) | [mihoutao](https://rsshub.app/asiafruitchina/categories/mihoutao)    |\n\n  | [柠檬](https://asiafruitchina.net/categories?gspx=ningmeng)       | [牛油果](https://asiafruitchina.net/categories?gspx=niuyouguo)      | [苹果](https://asiafruitchina.net/categories?gspx=pingguo)      | [葡萄/提子](https://asiafruitchina.net/categories?gspx=putao) | [其他](https://asiafruitchina.net/categories?gspx=qita)   |\n  | ----------------------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------- | --------------------------------------------------------- |\n  | [ningmeng](https://rsshub.app/asiafruitchina/categories/ningmeng) | [niuyouguo](https://rsshub.app/asiafruitchina/categories/niuyouguo) | [pingguo](https://rsshub.app/asiafruitchina/categories/pingguo) | [putao](https://rsshub.app/asiafruitchina/categories/putao)   | [qita](https://rsshub.app/asiafruitchina/categories/qita) |\n\n  | [奇异莓](https://asiafruitchina.net/categories?gspx=qiyimei)    | [热带水果](https://asiafruitchina.net/categories?gspx=redaishuiguo)       | [山竹](https://asiafruitchina.net/categories?gspx=shanzhu)      | [石榴](https://asiafruitchina.net/categories?gspx=shiliu)     | [蔬菜](https://asiafruitchina.net/categories?gspx=shucai)     |\n  | --------------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |\n  | [qiyimei](https://rsshub.app/asiafruitchina/categories/qiyimei) | [redaishuiguo](https://rsshub.app/asiafruitchina/categories/redaishuiguo) | [shanzhu](https://rsshub.app/asiafruitchina/categories/shanzhu) | [shiliu](https://rsshub.app/asiafruitchina/categories/shiliu) | [shucai](https://rsshub.app/asiafruitchina/categories/shucai) |\n\n  | [树莓](https://asiafruitchina.net/categories?gspx=shumei)     | [桃](https://asiafruitchina.net/categories?gspx=tao)    | [甜瓜](https://asiafruitchina.net/categories?gspx=tiangua)      | [甜椒](https://asiafruitchina.net/categories?gspx=tianjiao)       | [甜柿](https://asiafruitchina.net/categories?gspx=tianshi)      |\n  | ------------------------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------- |\n  | [shumei](https://rsshub.app/asiafruitchina/categories/shumei) | [tao](https://rsshub.app/asiafruitchina/categories/tao) | [tiangua](https://rsshub.app/asiafruitchina/categories/tiangua) | [tianjiao](https://rsshub.app/asiafruitchina/categories/tianjiao) | [tianshi](https://rsshub.app/asiafruitchina/categories/tianshi) |\n\n  | [香蕉](https://asiafruitchina.net/categories?gspx=xiangjiao)        | [西瓜](https://asiafruitchina.net/categories?gspx=xigua)    | [西梅](https://asiafruitchina.net/categories?gspx=ximei)    | [杏](https://asiafruitchina.net/categories?gspx=xing)     | [椰子](https://asiafruitchina.net/categories?gspx=yezi)   |\n  | ------------------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |\n  | [xiangjiao](https://rsshub.app/asiafruitchina/categories/xiangjiao) | [xigua](https://rsshub.app/asiafruitchina/categories/xigua) | [ximei](https://rsshub.app/asiafruitchina/categories/ximei) | [xing](https://rsshub.app/asiafruitchina/categories/xing) | [yezi](https://rsshub.app/asiafruitchina/categories/yezi) |\n\n  | [杨梅](https://asiafruitchina.net/categories?gspx=yangmei)      | [樱桃](https://asiafruitchina.net/categories?gspx=yintao)     | [油桃](https://asiafruitchina.net/categories?gspx=youtao)     | [柚子](https://asiafruitchina.net/categories?gspx=youzi)    |\n  | --------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------- |\n  | [yangmei](https://rsshub.app/asiafruitchina/categories/yangmei) | [yintao](https://rsshub.app/asiafruitchina/categories/yintao) | [youtao](https://rsshub.app/asiafruitchina/categories/youtao) | [youzi](https://rsshub.app/asiafruitchina/categories/youzi) |\n\n</details>\n",
+        "categories": [
+          "new-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "asiafruitchina.net/categories"
+            ]
+          },
+          {
+            "title": "全部",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/all"
+          },
+          {
+            "title": "橙",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/chengzi"
+          },
+          {
+            "title": "百香果",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/baixiangguo"
+          },
+          {
+            "title": "菠萝/凤梨",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/boluo"
+          },
+          {
+            "title": "菠萝蜜",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/boluomi"
+          },
+          {
+            "title": "草莓",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/caomei"
+          },
+          {
+            "title": "番荔枝/释迦",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/fanlizhi"
+          },
+          {
+            "title": "番茄",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/fanqie"
+          },
+          {
+            "title": "柑橘",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/ganju"
+          },
+          {
+            "title": "哈密瓜",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/hamigua"
+          },
+          {
+            "title": "核果",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/heguo"
+          },
+          {
+            "title": "红毛丹",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/hongmaodan"
+          },
+          {
+            "title": "火龙果",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/huolongguo"
+          },
+          {
+            "title": "浆果",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/jiangguo"
+          },
+          {
+            "title": "桔子",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/juzi"
+          },
+          {
+            "title": "蓝莓",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/lanmei"
+          },
+          {
+            "title": "梨",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/li"
+          },
+          {
+            "title": "荔枝",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/lizhi"
+          },
+          {
+            "title": "李子",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/lizi"
+          },
+          {
+            "title": "榴莲",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/liulian"
+          },
+          {
+            "title": "龙眼",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/lognyan"
+          },
+          {
+            "title": "芦笋",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/lusun"
+          },
+          {
+            "title": "蔓越莓",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/manyuemei"
+          },
+          {
+            "title": "芒果",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/mangguo"
+          },
+          {
+            "title": "猕猴桃/奇异果",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/mihoutao"
+          },
+          {
+            "title": "柠檬",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/ningmeng"
+          },
+          {
+            "title": "牛油果",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/niuyouguo"
+          },
+          {
+            "title": "苹果",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/pingguo"
+          },
+          {
+            "title": "葡萄/提子",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/putao"
+          },
+          {
+            "title": "其他",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/qita"
+          },
+          {
+            "title": "奇异莓",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/qiyimei"
+          },
+          {
+            "title": "热带水果",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/redaishuiguo"
+          },
+          {
+            "title": "山竹",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/shanzhu"
+          },
+          {
+            "title": "石榴",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/shiliu"
+          },
+          {
+            "title": "蔬菜",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/shucai"
+          },
+          {
+            "title": "树莓",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/shumei"
+          },
+          {
+            "title": "桃",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/tao"
+          },
+          {
+            "title": "甜瓜",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/tiangua"
+          },
+          {
+            "title": "甜椒",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/tianjiao"
+          },
+          {
+            "title": "甜柿",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/tianshi"
+          },
+          {
+            "title": "香蕉",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/xiangjiao"
+          },
+          {
+            "title": "西瓜",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/xigua"
+          },
+          {
+            "title": "西梅",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/ximei"
+          },
+          {
+            "title": "杏",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/xing"
+          },
+          {
+            "title": "椰子",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/yezi"
+          },
+          {
+            "title": "杨梅",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/yangmei"
+          },
+          {
+            "title": "樱桃",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/yintao"
+          },
+          {
+            "title": "油桃",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/youtao"
+          },
+          {
+            "title": "柚子",
+            "source": [
+              "asiafruitchina.net/categories"
+            ],
+            "target": "/categories/youzi"
+          }
+        ],
+        "view": 0,
+        "location": "categories.ts"
+      },
+      "/news": {
+        "path": "/news",
+        "name": "行业资讯",
+        "url": "asiafruitchina.net",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/asiafruitchina/news",
+        "categories": [
+          "new-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "asiafruitchina.net/category/news"
+            ],
+            "target": "/asiafruitchina/news"
+          }
+        ],
+        "view": 0,
+        "location": "news.ts"
+      }
+    },
+    "name": "亚洲水果",
+    "url": "asiafruitchina.net",
+    "categories": [
+      "new-media"
+    ],
+    "description": "",
+    "lang": "zh-CN"
+  },
   "asianfanfics": {
     "routes": {
       "/tag/:tag/:type": {
@@ -10439,6 +11104,108 @@
     "name": "Bangumi 番组计划",
     "url": "bangumi.tv",
     "lang": "zh-CN"
+  },
+  "baobua": {
+    "routes": {
+      "/category/:category": {
+        "path": "/category/:category",
+        "categories": [
+          "picture"
+        ],
+        "example": "/baobua/category/network",
+        "parameters": {
+          "category": "Category"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "baobua.com/cat/:category"
+            ],
+            "target": "/category/:category"
+          }
+        ],
+        "name": "Category",
+        "maintainers": [
+          "AiraNadih"
+        ],
+        "url": "baobua.com/",
+        "location": "category.ts"
+      },
+      "/": {
+        "path": "/",
+        "categories": [
+          "picture"
+        ],
+        "example": "/baobua",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "baobua.com/"
+            ],
+            "target": ""
+          }
+        ],
+        "name": "Latest",
+        "maintainers": [
+          "AiraNadih"
+        ],
+        "url": "baobua.com/",
+        "location": "latest.ts"
+      },
+      "/search/:keyword": {
+        "path": "/search/:keyword",
+        "categories": [
+          "picture"
+        ],
+        "example": "/baobua/search/cos",
+        "parameters": {
+          "keyword": "Keyword"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "baobua.com/search"
+            ],
+            "target": "/search/:keyword"
+          }
+        ],
+        "name": "Search",
+        "maintainers": [
+          "AiraNadih"
+        ],
+        "url": "baobua.com/",
+        "location": "search.ts"
+      }
+    },
+    "name": "BaoBua",
+    "url": "baobua.com",
+    "description": "BaoBua.Com - Hot beauty girl pics, girls photos, free watch online hd photo sets",
+    "lang": "en"
   },
   "baoyu": {
     "routes": {
@@ -14700,6 +15467,132 @@
     "url": "bulianglin.com",
     "lang": "zh-CN"
   },
+  "bullionvault": {
+    "routes": {
+      "/gold-news/:category?": {
+        "path": "/gold-news/:category?",
+        "name": "Gold News",
+        "url": "bullionvault.com",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/bullionvault/gold-news",
+        "parameters": {
+          "category": {
+            "description": "Category",
+            "options": [
+              {
+                "label": "Gold market analysis & gold investment research",
+                "value": ""
+              },
+              {
+                "label": "Opinion & Analysis",
+                "value": "opinion-analysis"
+              },
+              {
+                "label": "Gold Price News",
+                "value": "gold-price-news"
+              },
+              {
+                "label": "Investment News",
+                "value": "news"
+              },
+              {
+                "label": "Gold Investor Index",
+                "value": "gold-investor-index"
+              },
+              {
+                "label": "Gold Infographics",
+                "value": "infographics"
+              },
+              {
+                "label": "Market Fundamentals",
+                "value": "market-fundamentals"
+              }
+            ]
+          }
+        },
+        "description": ":::tip\nIf you subscribe to [Gold Price News](https://www.bullionvault.com/gold-news/gold-price-news)，where the URL is `https://www.bullionvault.com/gold-news/gold-price-news`, extract the part `https://www.bullionvault.com/gold-news/` to the end, and use it as the parameter to fill in. Therefore, the route will be [`/bullionvault/gold-news/gold-price-news`](https://rsshub.app/bullionvault/gold-news/gold-price-news).\n:::\n\n| Category                                                                          | ID                                                                                   |\n| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |\n| [Opinion & Analysis](https://www.bullionvault.com/gold-news/opinion-analysis)     | [opinion-analysis](https://rsshub.app/bullionvault/gold-news/opinion-analysis)       |\n| [Gold Price News](https://www.bullionvault.com/gold-news/gold-price-news)         | [gold-price-news](https://rsshub.app/bullionvault/gold-news/gold-price-news)         |\n| [Investment News](https://www.bullionvault.com/gold-news/news)                    | [news](https://rsshub.app/bullionvault/gold-news/news)                               |\n| [Gold Investor Index](https://www.bullionvault.com/gold-news/gold-investor-index) | [gold-investor-index](https://rsshub.app/bullionvault/gold-news/gold-investor-index) |\n| [Gold Infographics](https://www.bullionvault.com/gold-news/infographics)          | [infographics](https://rsshub.app/bullionvault/gold-news/infographics)               |\n| [Market Fundamentals](https://www.bullionvault.com/gold-news/market-fundamentals) | [market-fundamentals](https://rsshub.app/bullionvault/gold-news/market-fundamentals) |\n",
+        "categories": [
+          "finance"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "bullionvault.com/gold-news/:category"
+            ]
+          },
+          {
+            "title": "Gold market analysis & gold investment research",
+            "source": [
+              "bullionvault.com/gold-news"
+            ],
+            "target": "/gold-news"
+          },
+          {
+            "title": "Opinion & Analysis",
+            "source": [
+              "bullionvault.com/gold-news/opinion-analysis"
+            ],
+            "target": "/gold-news/opinion-analysis"
+          },
+          {
+            "title": "Gold Price News",
+            "source": [
+              "bullionvault.com/gold-news/gold-price-news"
+            ],
+            "target": "/gold-news/gold-price-news"
+          },
+          {
+            "title": "Investment News",
+            "source": [
+              "bullionvault.com/gold-news/news"
+            ],
+            "target": "/gold-news/news"
+          },
+          {
+            "title": "Gold Investor Index",
+            "source": [
+              "bullionvault.com/gold-news/gold-investor-index"
+            ],
+            "target": "/gold-news/gold-investor-index"
+          },
+          {
+            "title": "Gold Infographics",
+            "source": [
+              "bullionvault.com/gold-news/infographics"
+            ],
+            "target": "/gold-news/infographics"
+          },
+          {
+            "title": "Market Fundamentals",
+            "source": [
+              "bullionvault.com/gold-news/market-fundamentals"
+            ],
+            "target": "/gold-news/market-fundamentals"
+          }
+        ],
+        "view": 0,
+        "location": "gold-news.ts"
+      }
+    },
+    "name": "BullionVault",
+    "url": "bullionvault.com",
+    "categories": [
+      "finance"
+    ],
+    "description": "",
+    "lang": "en"
+  },
   "bupt": {
     "routes": {
       "/jwc/:type": {
@@ -17358,6 +18251,35 @@
         ],
         "url": "jw.cdu.edu.cn/",
         "location": "jwgg.ts"
+      },
+      "/tzggcdunews": {
+        "path": "/tzggcdunews",
+        "categories": [
+          "university"
+        ],
+        "example": "/cdu/tzggcdunews",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "news.cdu.edu.cn/"
+            ]
+          }
+        ],
+        "name": "通知公告",
+        "maintainers": [
+          "uuwor"
+        ],
+        "url": "news.cdu.edu.cn/",
+        "location": "tzggcdunews.ts"
       }
     },
     "name": "成都大学",
@@ -17941,6 +18863,24 @@
     "name": "差评",
     "url": "chaping.cn",
     "lang": "zh-CN"
+  },
+  "cherrytimes": {
+    "routes": {
+      "/market": {
+        "path": "/market",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/cherrytimes/market",
+        "name": "Market",
+        "maintainers": [
+          "canonnizq"
+        ],
+        "location": "market.ts"
+      }
+    },
+    "name": "Cherry Times",
+    "url": "cherrytimes.it"
   },
   "chiculture": {
     "routes": {
@@ -19369,6 +20309,51 @@
     },
     "name": "川流",
     "url": "chuanliu.org",
+    "lang": "zh-CN"
+  },
+  "chuapp": {
+    "routes": {
+      "/:category?": {
+        "path": "/:category?",
+        "categories": [
+          "game"
+        ],
+        "example": "/chuapp/daily",
+        "parameters": {
+          "category": "栏目分类，见下表"
+        },
+        "description": "\n  | `category` | 栏目分类 |\n  | ------------ | ------- |\n  | `daily`    | 每日聚焦 |\n  | `pcz`      | 最好玩   |\n  | `night`    | 触乐夜话 |\n  | `news`     | 动态资讯 |\n    ",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "分类",
+        "maintainers": [
+          "dousha"
+        ],
+        "radar": [
+          {
+            "source": [
+              "chuapp.com/category/:category"
+            ],
+            "target": "/:category"
+          },
+          {
+            "source": [
+              "chuapp.com/tag/index/id/20369.html"
+            ],
+            "target": "/night"
+          }
+        ],
+        "location": "chuapp.ts"
+      }
+    },
+    "name": "触乐",
+    "url": "chuapp.com",
     "lang": "zh-CN"
   },
   "chub": {
@@ -21754,8 +22739,7 @@
         "name": "漫画更新",
         "maintainers": [
           "btdwv",
-          "marvolo666",
-          "yan12125"
+          "marvolo666"
         ],
         "location": "comic.ts"
       }
@@ -23007,6 +23991,56 @@
     ],
     "description": "",
     "lang": "zh-CN"
+  },
+  "cupl": {
+    "routes": {
+      "/jwc": {
+        "path": "/jwc",
+        "url": "jwc.cupl.edu.cn/index/tzgg.htm",
+        "categories": [
+          "university"
+        ],
+        "example": "/cupl/jwc",
+        "description": "中国政法大学教务处通知公告",
+        "name": "教务处通知公告",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "jwc.cupl.edu.cn/index/tzgg.htm",
+              "jwc.cupl.edu.cn/"
+            ],
+            "target": "/jwc"
+          }
+        ],
+        "maintainers": [
+          "Fgju"
+        ],
+        "location": "jwc.ts"
+      }
+    },
+    "name": "CUPL",
+    "url": "jwc.cupl.edu.cn/index/tzgg.htm",
+    "description": "China University of Political Science and Law Academic Affairs Office Notices",
+    "zh": {
+      "name": "中国政法大学",
+      "description": "中国政法大学教务处通知公告"
+    },
+    "zh-TW": {
+      "name": "中國政法大學",
+      "description": "中國政法大學教務處通知公告"
+    },
+    "ja": {
+      "name": "中国政法大学",
+      "description": "中国政法大学教務処通知公告"
+    }
   },
   "curiouscat": {
     "routes": {
@@ -25366,6 +26400,53 @@
     "url": "dianping.com",
     "lang": "zh-CN"
   },
+  "diariofruticola": {
+    "routes": {
+      "/filtro/:filter{.+}": {
+        "path": "/filtro/:filter{.+}",
+        "name": "Filtro",
+        "url": "diariofruticola.cl",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/diariofruticola/filtro/cerezas/71",
+        "parameters": {
+          "filter": {
+            "description": "Filter"
+          }
+        },
+        "description": ":::tip\nIf you subscribe to [Cerezas](https://www.diariofruticola.cl/filtro/cerezas/71/)，where the URL is `https://www.diariofruticola.cl/filtro/cerezas/71/`, extract the part `https://diariofruticola.cl/filtro` to the end, which is `/`, and use it as the parameter to fill in. Therefore, the route will be [`/diariofruticola/filtro/cerezas/71`](https://rsshub.app/diariofruticola/filtro/cerezas/71).\n:::\n",
+        "categories": [
+          "new-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "diariofruticola.cl/filtro/:filter"
+            ]
+          }
+        ],
+        "view": 0,
+        "location": "filtro.ts"
+      }
+    },
+    "name": "Diario Frutícola",
+    "url": "diariofruticola.cl",
+    "categories": [
+      "new-media"
+    ],
+    "description": "",
+    "lang": "es"
+  },
   "diershoubing": {
     "routes": {
       "/news": {
@@ -27698,100 +28779,6 @@
   },
   "duozhuayu": {
     "routes": {
-      "/book-categories/:categoryId/:subCategoryId?": {
-        "path": "/book-categories/:categoryId/:subCategoryId?",
-        "categories": [
-          "shopping"
-        ],
-        "example": "/duozhuayu/book-categories/750409452376692948",
-        "parameters": {
-          "categoryId": "分类 ID，可在 URL 中找到",
-          "subCategoryId": "子分类 ID，可在 URL 中找到，可选"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": true,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "duozhuayu.com/book-categories/:categoryId",
-              "duozhuayu.com/book-categories/:categoryId?subCategoryId=:subCategoryId"
-            ],
-            "target": "/book-categories/:categoryId/:subCategoryId?"
-          }
-        ],
-        "name": "图书分类",
-        "maintainers": [
-          "fengkx"
-        ],
-        "description": ":::tip\n带有子分类的订阅格式: `/duozhuayu/book-categories/分类ID/子分类ID`\n:::\n\n例如: [科幻 - 多抓鱼](https://www.duozhuayu.com/book-categories/750409452376692948?subCategoryId=767083323578261442) 对应路由为: `/duozhuayu/book-categories/750409452376692948/767083323578261442`",
-        "location": "category.ts"
-      },
-      "/charts/:id": {
-        "path": "/charts/:id",
-        "categories": [
-          "shopping"
-        ],
-        "example": "/duozhuayu/charts/765988201625163649",
-        "parameters": {
-          "id": "榜单 ID，可在 URL 中找到"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": true,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "duozhuayu.com/charts/:id"
-            ]
-          }
-        ],
-        "name": "榜单",
-        "maintainers": [
-          "fengkx"
-        ],
-        "location": "charts.ts"
-      },
-      "/clothing/:keyword": {
-        "path": "/clothing/:keyword",
-        "categories": [
-          "shopping"
-        ],
-        "example": "/duozhuayu/clothing/男装",
-        "parameters": {
-          "keyword": "搜索关键词"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": true,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "duozhuayu.com/search/clothing/:keyword"
-            ]
-          }
-        ],
-        "name": "服饰搜索",
-        "maintainers": [
-          "fengkx"
-        ],
-        "location": "clothing.ts"
-      },
       "/search/:wd": {
         "path": "/search/:wd",
         "categories": [
@@ -27821,42 +28808,11 @@
           "fengkx"
         ],
         "location": "search.ts"
-      },
-      "/tags/:id": {
-        "path": "/tags/:id",
-        "categories": [
-          "shopping"
-        ],
-        "example": "/duozhuayu/tags/960494709850119556",
-        "parameters": {
-          "id": "标签 ID，可在 URL 中找到"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": true,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "duozhuayu.com/tag/:id"
-            ]
-          }
-        ],
-        "name": "标签",
-        "maintainers": [
-          "fengkx"
-        ],
-        "location": "tag.ts"
       }
     },
     "name": "多抓鱼",
     "url": "duozhuayu.com",
-    "lang": "zh-CN",
-    "description": ":::tip\n官方提供了少量 RSS: [https://www.duozhuayu.com/rss](https://www.duozhuayu.com/rss)\n:::"
+    "lang": "zh-CN"
   },
   "dushu": {
     "routes": {
@@ -30279,6 +31235,44 @@
     "name": "追新番",
     "url": "fanxinzhui.com",
     "lang": "zh-CN"
+  },
+  "farcaster": {
+    "routes": {
+      "/user/:username": {
+        "path": "/user/:username",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/farcaster/user/vitalik.eth",
+        "parameters": {
+          "username": "Farcaster username"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "warpcast.com/:username"
+            ],
+            "target": "/user/:username"
+          }
+        ],
+        "name": "Farcaster User",
+        "maintainers": [
+          "DIYgod"
+        ],
+        "location": "user.ts"
+      }
+    },
+    "name": "Farcaster",
+    "url": "www.farcaster.xyz",
+    "lang": "en"
   },
   "farmatters": {
     "routes": {
@@ -33256,6 +34250,34 @@
     "url": "news.gamegene.cn",
     "lang": "zh-CN"
   },
+  "gamekee": {
+    "routes": {
+      "/news": {
+        "path": "/news",
+        "categories": [
+          "game"
+        ],
+        "example": "/gamekee/news",
+        "radar": [
+          {
+            "source": [
+              "gamekee.com",
+              "gamekee.com/news"
+            ],
+            "target": "/news"
+          }
+        ],
+        "name": "游戏情报",
+        "maintainers": [
+          "ueiu"
+        ],
+        "url": "gamekee.com/news",
+        "location": "news.ts"
+      }
+    },
+    "name": "GameKee | 游戏百科攻略",
+    "url": "www.gamekee.com"
+  },
   "gamer": {
     "routes": {
       "/gnn/:category?": {
@@ -34395,6 +35417,61 @@
     ],
     "description": "",
     "lang": "zh-CN"
+  },
+  "gelbooru": {
+    "routes": {
+      "/post/:tags?/:quality?": {
+        "path": "/post/:tags?/:quality?",
+        "categories": [
+          "picture"
+        ],
+        "view": 2,
+        "example": "/gelbooru/post/1girl rating:general",
+        "parameters": {
+          "tags": "要搜索的标签，多个标签用 ` `（空格）隔开",
+          "quality": {
+            "description": "图片质量，可选值为 `sample`（压缩后的图片，推荐值） 或 `orig`（原图），默认为 `sample`",
+            "default": "sample"
+          }
+        },
+        "features": {
+          "requireConfig": [
+            {
+              "name": "GELBOORU_API_KEY",
+              "description": "Gelbooru 偶尔会开启 API 认证，需配合 `GELBOORU_USER_ID`，从 `https://gelbooru.com/index.php?page=account&s=options` 获取",
+              "optional": true
+            },
+            {
+              "name": "GELBOORU_USER_ID",
+              "description": "参见 `GELBOORU_API_KEY`",
+              "optional": true
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "gelbooru.com/index.php"
+            ]
+          }
+        ],
+        "name": "标签查询",
+        "maintainers": [
+          "magicFeirl"
+        ],
+        "description": "\n- 默认查询: `/gelbooru/post` 功能等同查询 Gelbooru 网站最新的投稿\n- 单标签查询: `/gelbooru/post/1girl` 查询 `1girl` 的最新投稿\n- 多标签查询: `/gelbooru/post/1girl school_uniform rating:general`\n- 指定为原图: `/gelbooru/post/1girl school_uniform rating:general/orig`\n- 更多例子: 请参考 Gelbooru 官方 wiki https://gelbooru.com/index.php?page=wiki&s=&s=view&id=25921\n\n**可选的 URL 参数**\n- limit 页面返回数据量，默认 40，可选 1 ~ 100\n\ne.g.: `/gelbooru/post?limit=20&`\n",
+        "location": "post.ts"
+      }
+    },
+    "name": "Gelbooru",
+    "url": "gelbooru.com",
+    "description": "gelbooru posts"
   },
   "gelonghui": {
     "routes": {
@@ -36723,7 +37800,7 @@
         "parameters": {
           "category": "分类，默认为监管动态，即 915，可在对应分类页 URL 中找到"
         },
-        "description": "::: tip\n  若订阅 [监管动态](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemId=915&itemUrl=ItemListRightList.html)，网址为 `https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemId=915&itemUrl=ItemListRightList.html`。截取 `itemId` 的值 `915` 作为参数填入，此时路由为 [`/gov/cbirc/915`](https://rsshub.app/gov/cbirc/915)。\n:::\n\n#### [首页](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=899&itemId=971&itemUrl=ItemListRightMore.html)\n\n| [弹出公告](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=971&itemId=972&itemUrl=sss) | [法律声明](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=971&itemId=4128&itemUrl=ItemListRightArticle.html) |\n| --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |\n| [972](https://rsshub.app/gov/cbirc/972)                                                             | [4128](https://rsshub.app/gov/cbirc/4128)                                                                                  |\n\n#### [机构概况](https://www.cbirc.gov.cn/cn/view/pages/jigougaikuang/jigougaikuang.html)\n\n| [主要职责](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=900&itemId=901&itemUrl=ItemListRightArticle.html) | [总局领导](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=900&itemId=902&itemUrl=jigougaikuang/huilingdao.html) | [内设机构](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=900&itemId=911&itemUrl=jigougaikuang/neishejigou.html) | [直属行政机构](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=900&itemId=4243&itemUrl=jigougaikuang/zhishuxingzhengjigou.html) | [派出机构](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=900&itemId=912&itemUrl=jigougaikuang/paichujigou.html) |\n| ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |\n| [901](https://rsshub.app/gov/cbirc/901)                                                                                   | [902](https://rsshub.app/gov/cbirc/902)                                                                                       | [911](https://rsshub.app/gov/cbirc/911)                                                                                        | [4243](https://rsshub.app/gov/cbirc/4243)                                                                                                    | [912](https://rsshub.app/gov/cbirc/912)                                                                                        |\n\n| [联系方式](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=900&itemId=913&itemUrl=jigougaikuang/lianxifangshi.html) |\n| -------------------------------------------------------------------------------------------------------------------------------- |\n| [913](https://rsshub.app/gov/cbirc/913)                                                                                          |\n\n#### [新闻资讯](https://www.cbirc.gov.cn/cn/view/pages/xinwenzixun/xinwenzixun.html)\n\n| [监管动态](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=914&itemId=915&itemUrl=ItemListRightList.html) | [政策解读](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=914&itemId=916&itemUrl=ItemListRightMore.html) | [领导活动及讲话](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=914&itemId=919&itemUrl=ItemListRightList.html) | [新闻发布会及访谈](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=914&itemId=920&itemUrl=xinwenzixun/xinwenfabu.html) | [新闻发言人](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=914&itemId=921&itemUrl=xinwenzixun/xinwenfayan.html) |\n| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |\n| [915](https://rsshub.app/gov/cbirc/915)                                                                                | [916](https://rsshub.app/gov/cbirc/916)                                                                                | [919](https://rsshub.app/gov/cbirc/919)                                                                                      | [920](https://rsshub.app/gov/cbirc/920)                                                                                             | [921](https://rsshub.app/gov/cbirc/921)                                                                                        |\n\n#### [政务信息](https://www.cbirc.gov.cn/cn/view/pages/zhengwuxinxi/zhengwuxinxi.html)\n\n| [政府信息公开](https://www.cbirc.gov.cn/cn/view/pages/zhengwuxinxi/zhengfuxinxi.html) | [公告通知](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=923&itemId=925&itemUrl=ItemListRightList.html) | [政策法规](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=923&itemId=926&itemUrl=ItemListRightMore.html) | [行政许可](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=923&itemId=930&itemUrl=zhengwuxinxi/xingzhengxuke.html) | [行政处罚](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=923&itemId=931&itemUrl=zhengwuxinxi/xingzhengchufa.html) |\n| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |\n| [924](https://rsshub.app/gov/cbirc/924)                                               | [925](https://rsshub.app/gov/cbirc/925)                                                                                | [926](https://rsshub.app/gov/cbirc/926)                                                                                | [930](https://rsshub.app/gov/cbirc/930)                                                                                         | [931](https://rsshub.app/gov/cbirc/931)                                                                                          |\n\n| [行政监管措施](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=923&itemId=932&itemUrl=ItemListRightList.html) | [人事信息](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=923&itemId=933&itemUrl=ItemListRightList.html) |\n| -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |\n| [932](https://rsshub.app/gov/cbirc/932)                                                                                    | [933](https://rsshub.app/gov/cbirc/933)                                                                                |\n\n#### [在线服务](https://www.cbirc.gov.cn/cn/view/pages/zaixianfuwu/zaixianfuwu.html)\n\n| [行政许可办事服务指南](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=937&itemId=938&itemUrl=zaixianfuwu/banshifuwu.html) | [查询服务](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=937&itemId=939&itemUrl=zaixianfuwu/chaxunfuwu.html) |\n| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |\n| [938](https://rsshub.app/gov/cbirc/938)                                                                                                 | [939](https://rsshub.app/gov/cbirc/939)                                                                                     |\n\n#### [互动交流](https://www.cbirc.gov.cn/cn/view/pages/hudongjiaoliu/hudongjiaoliu.html)\n\n| [政务咨询](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=945&itemId=946&itemUrl=tosubmenu:hudongjiaoliu/woyaozixun.html) | [征集调查](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=945&itemId=950&itemUrl=ItemListRightMore.html) | [国务院办公厅开通“国家政务服务投诉与建议”小程序](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=945&itemId=952&itemUrl=http://www.gov.cn/xinwen/2018-09/20/content_5323786.htm) |\n| --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| [946](https://rsshub.app/gov/cbirc/946)                                                                                                 | [950](https://rsshub.app/gov/cbirc/950)                                                                                | [952](https://rsshub.app/gov/cbirc/952)                                                                                                                                                       |\n\n#### [统计数据](https://www.cbirc.gov.cn/cn/view/pages/tongjishuju/tongjishuju.html)\n\n| [统计信息](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=953&itemId=954&itemUrl=ItemListRightList.html) | [数据图表](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=953&itemId=955&itemUrl=tosubmenu:tongjishuju/zongzichan.html) |\n| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |\n| [954](https://rsshub.app/gov/cbirc/954)                                                                                | [955](https://rsshub.app/gov/cbirc/955)                                                                                               |\n\n#### [专题专栏](https://www.cbirc.gov.cn/cn/view/pages/zhuantizhuanlan/zhuantizhuanlan.html)\n\n| [推进普惠金融高质量发展](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=4234&itemUrl=ItemListRightMore.html) | [防范和处置非法集资](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=963&itemUrl=ItemListRightMore.html) | [消费者保护](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=4097&itemUrl=ItemListRightMore.html) | [法治宣传](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=4106&itemUrl=ItemListRightMore.html) | [政府网站年度报表](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=970&itemUrl=ItemListRightList.html) |\n| ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |\n| [4234](https://rsshub.app/gov/cbirc/4234)                                                                                             | [963](https://rsshub.app/gov/cbirc/963)                                                                                          | [4097](https://rsshub.app/gov/cbirc/4097)                                                                                 | [4106](https://rsshub.app/gov/cbirc/4106)                                                                               | [970](https://rsshub.app/gov/cbirc/970)                                                                                        |\n\n| [服务民营企业](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=4171&itemUrl=ItemListRightList.html) | [服务制造业发展](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=4217&itemUrl=ItemListRightList.html) | [学习贯彻习近平新时代中国特色社会主义思想主题教育](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=4229&itemUrl=ItemListRightMore.html) |\n| --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| [4171](https://rsshub.app/gov/cbirc/4171)                                                                                   | [4217](https://rsshub.app/gov/cbirc/4217)                                                                                     | [4229](https://rsshub.app/gov/cbirc/4229)                                                                                                                       |\n  ",
+        "description": "::: tip\n  若订阅 [监管动态](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemId=915&itemUrl=ItemListRightList.html)，网址为 `https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemId=915&itemUrl=ItemListRightList.html`。截取 `itemId` 的值 `915` 作为参数填入，此时路由为 [`/gov/cbirc/915`](https://rsshub.app/gov/cbirc/915)。\n:::\n\n#### [首页](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=899&itemId=971&itemUrl=ItemListRightMore.html)\n\n| [弹出公告](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=971&itemId=972&itemUrl=sss) | [法律声明](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=971&itemId=4128&itemUrl=ItemListRightArticle.html) |\n| --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |\n| [972](https://rsshub.app/gov/cbirc/972)                                                             | [4128](https://rsshub.app/gov/cbirc/4128)                                                                                  |\n\n#### [机构概况](https://www.cbirc.gov.cn/cn/view/pages/jigougaikuang/jigougaikuang.html)\n\n| [主要职责](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=900&itemId=901&itemUrl=ItemListRightArticle.html) | [总局领导](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=900&itemId=902&itemUrl=jigougaikuang/huilingdao.html) | [内设机构](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=900&itemId=911&itemUrl=jigougaikuang/neishejigou.html) | [直属行政机构](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=900&itemId=4243&itemUrl=jigougaikuang/zhishuxingzhengjigou.html) | [派出机构](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=900&itemId=912&itemUrl=jigougaikuang/paichujigou.html) |\n| ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |\n| [901](https://rsshub.app/gov/cbirc/901)                                                                                   | [902](https://rsshub.app/gov/cbirc/902)                                                                                       | [911](https://rsshub.app/gov/cbirc/911)                                                                                        | [4243](https://rsshub.app/gov/cbirc/4243)                                                                                                    | [912](https://rsshub.app/gov/cbirc/912)                                                                                        |\n\n| [联系方式](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=900&itemId=913&itemUrl=jigougaikuang/lianxifangshi.html) |\n| -------------------------------------------------------------------------------------------------------------------------------- |\n| [913](https://rsshub.app/gov/cbirc/913)                                                                                          |\n\n#### [新闻资讯](https://www.cbirc.gov.cn/cn/view/pages/xinwenzixun/xinwenzixun.html)\n\n| [监管动态](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=914&itemId=915&itemUrl=ItemListRightList.html) | [政策解读](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=914&itemId=916&itemUrl=ItemListRightMore.html) | [领导活动及讲话](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=914&itemId=919&itemUrl=ItemListRightList.html) | [新闻发布会及访谈](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=914&itemId=920&itemUrl=xinwenzixun/xinwenfabu.html) | [新闻发言人](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=914&itemId=921&itemUrl=xinwenzixun/xinwenfayan.html) |\n| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |\n| [915](https://rsshub.app/gov/cbirc/915)                                                                                | [916](https://rsshub.app/gov/cbirc/916)                                                                                | [919](https://rsshub.app/gov/cbirc/919)                                                                                      | [920](https://rsshub.app/gov/cbirc/920)                                                                                             | [921](https://rsshub.app/gov/cbirc/921)                                                                                        |\n\n#### [政务信息](https://www.cbirc.gov.cn/cn/view/pages/zhengwuxinxi/zhengwuxinxi.html)\n\n| [政府信息公开](https://www.cbirc.gov.cn/cn/view/pages/zhengwuxinxi/zhengfuxinxi.html) | [公告通知](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=923&itemId=925&itemUrl=ItemListRightList.html) | [政策法规](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=923&itemId=926&itemUrl=ItemListRightMore.html) | [行政许可](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=923&itemId=930&itemUrl=zhengwuxinxi/xingzhengxuke.html) | [行政处罚](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=923&itemId=931&itemUrl=zhengwuxinxi/xingzhengchufa.html) |\n| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |\n| [924](https://rsshub.app/gov/cbirc/924)                                               | [925](https://rsshub.app/gov/cbirc/925)                                                                                | [926](https://rsshub.app/gov/cbirc/926)                                                                                | [930](https://rsshub.app/gov/cbirc/930)                                                                                         | [931](https://rsshub.app/gov/cbirc/931)                                                                                          |\n\n| [行政监管措施](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=923&itemId=932&itemUrl=ItemListRightList.html) | [人事信息](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=923&itemId=933&itemUrl=ItemListRightList.html) |\n| -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |\n| [932](https://rsshub.app/gov/cbirc/932)                                                                                    | [933](https://rsshub.app/gov/cbirc/933)                                                                                |\n\n#### [在线服务](https://www.cbirc.gov.cn/cn/view/pages/zaixianfuwu/zaixianfuwu.html)\n\n| [行政许可办事服务指南](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=937&itemId=938&itemUrl=zaixianfuwu/banshifuwu.html) | [查询服务](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=937&itemId=939&itemUrl=zaixianfuwu/chaxunfuwu.html) |\n| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |\n| [938](https://rsshub.app/gov/cbirc/938)                                                                                                 | [939](https://rsshub.app/gov/cbirc/939)                                                                                     |\n\n#### [互动交流](https://www.cbirc.gov.cn/cn/view/pages/hudongjiaoliu/hudongjiaoliu.html)\n\n| [政务咨询](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=945&itemId=946&itemUrl=tosubmenu:hudongjiaoliu/woyaozixun.html) | [征集调查](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=945&itemId=950&itemUrl=ItemListRightMore.html) | [国务院办公厅开通\"国家政务服务投诉与建议\"小程序](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=945&itemId=952&itemUrl=http://www.gov.cn/xinwen/2018-09/20/content_5323786.htm) |\n| --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| [946](https://rsshub.app/gov/cbirc/946)                                                                                                 | [950](https://rsshub.app/gov/cbirc/950)                                                                                | [952](https://rsshub.app/gov/cbirc/952)                                                                                                                                                       |\n\n#### [统计数据](https://www.cbirc.gov.cn/cn/view/pages/tongjishuju/tongjishuju.html)\n\n| [统计信息](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=953&itemId=954&itemUrl=ItemListRightList.html) | [数据图表](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=953&itemId=955&itemUrl=tosubmenu:tongjishuju/zongzichan.html) |\n| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |\n| [954](https://rsshub.app/gov/cbirc/954)                                                                                | [955](https://rsshub.app/gov/cbirc/955)                                                                                               |\n\n#### [专题专栏](https://www.cbirc.gov.cn/cn/view/pages/zhuantizhuanlan/zhuantizhuanlan.html)\n\n| [推进普惠金融高质量发展](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=4234&itemUrl=ItemListRightMore.html) | [防范和处置非法集资](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=963&itemUrl=ItemListRightMore.html) | [消费者保护](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=4097&itemUrl=ItemListRightMore.html) | [法治宣传](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=4106&itemUrl=ItemListRightMore.html) | [政府网站年度报表](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=970&itemUrl=ItemListRightList.html) |\n| ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |\n| [4234](https://rsshub.app/gov/cbirc/4234)                                                                                             | [963](https://rsshub.app/gov/cbirc/963)                                                                                          | [4097](https://rsshub.app/gov/cbirc/4097)                                                                                 | [4106](https://rsshub.app/gov/cbirc/4106)                                                                               | [970](https://rsshub.app/gov/cbirc/970)                                                                                        |\n\n| [服务民营企业](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=4171&itemUrl=ItemListRightList.html) | [服务制造业发展](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=4217&itemUrl=ItemListRightList.html) | [学习贯彻习近平新时代中国特色社会主义思想主题教育](https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=4229&itemUrl=ItemListRightMore.html) |\n| --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| [4171](https://rsshub.app/gov/cbirc/4171)                                                                                   | [4217](https://rsshub.app/gov/cbirc/4217)                                                                                     | [4229](https://rsshub.app/gov/cbirc/4229)                                                                                                                       |\n  ",
         "categories": [
           "government"
         ],
@@ -36911,7 +37988,7 @@
             "target": "/cbirc/950"
           },
           {
-            "title": "互动交流 - 国务院办公厅开通“国家政务服务投诉与建议”小程序",
+            "title": "互动交流 - 国务院办公厅开通\"国家政务服务投诉与建议\"小程序",
             "source": [
               "www.cbirc.gov.cn/cn/view/pages/ItemList.html"
             ],
@@ -37816,6 +38893,34 @@
           "p3psi-boo"
         ],
         "location": "hainan/iitb/tzgg.ts"
+      },
+      "/hangzhou/zwfw": {
+        "path": "/hangzhou/zwfw",
+        "categories": [
+          "government"
+        ],
+        "example": "/gov/hangzhou/zwfw",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": true,
+          "antiCrawler": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "hangzhou.gov.cn/col/col1256349/index.html"
+            ]
+          }
+        ],
+        "name": "政务服务公开",
+        "maintainers": [
+          "flynncao"
+        ],
+        "url": "hangzhou.gov.cn/col/col1256349/index.html",
+        "location": "hangzhou/zwfw.ts"
       },
       "/hebei/czt/xwdt/:category?": {
         "path": "/hebei/czt/xwdt/:category?",
@@ -40437,9 +41542,10 @@
         ],
         "maintainers": [
           "bigfei",
-          "nczitzk"
+          "nczitzk",
+          "reply2future"
         ],
-        "example": "/stats/sj/zxfb",
+        "example": "/gov/stats/sj/zxfb",
         "radar": [
           {
             "title": "国家统计局 通用",
@@ -40940,7 +42046,10 @@
       "government"
     ],
     "description": "",
-    "lang": "zh-CN"
+    "lang": "zh-CN",
+    "zh": {
+      "name": "杭州市人民政府"
+    }
   },
   "gq": {
     "routes": {
@@ -43717,6 +44826,52 @@
     "description": "来自香港天文台的全球地震记录",
     "lang": "zh-HK"
   },
+  "hkushop": {
+    "routes": {
+      "/vinyl/:cat?": {
+        "path": "/vinyl/:cat?",
+        "categories": [
+          "shopping"
+        ],
+        "example": "/hkushop/vinyl",
+        "parameters": {
+          "cat": "分类，见下表，默认不分类"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": true,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false,
+          "supportRadar": true
+        },
+        "radar": [
+          {
+            "source": [
+              "hkushop.com/vinyl-or-picture-lp.html",
+              "hkushop.com/"
+            ],
+            "target": "/vinyl"
+          }
+        ],
+        "name": "HKU Shop 黑胶专区",
+        "maintainers": [
+          "gideonsenku"
+        ],
+        "description": "常见分类:\n| 華語音樂 | 經典復刻 | 古典跨界 | 爵士音樂 | 國際音樂 | 電影原聲帶 | 黑膠日本音樂 |\n| ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n| 37 | 38 | 40 | 41 | 39 | 170 | 224 |",
+        "url": "hkushop.com/vinyl-or-picture-lp.html",
+        "location": "vinyl-or-picture-lp.ts"
+      }
+    },
+    "name": "環球唱片(香港)官方網上商店",
+    "url": "hkushop.com",
+    "lang": "zh-HK",
+    "categories": [
+      "shopping"
+    ],
+    "description": "環球唱片(香港)官方網上商店"
+  },
   "hljucm": {
     "routes": {
       "/yjsy/:category?": {
@@ -44485,6 +45640,37 @@
   },
   "hrbeu": {
     "routes": {
+      "/cec/:id": {
+        "path": "/cec/:id",
+        "categories": [
+          "university"
+        ],
+        "example": "/hrbeu/cec/tzgg",
+        "parameters": {
+          "id": "栏目编号，由 `URL` 中获取。"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "cec.hrbeu.edu.cn/:id/list.htm"
+            ]
+          }
+        ],
+        "name": "航天与建筑工程学院",
+        "maintainers": [
+          "tsinglinrain"
+        ],
+        "description": "汉语拼音和中文不对应，猜测后三个为：教务工作、科研成果、学生工作的拼音。\n\n| 新闻动态 | 通知公告 | 综合办公 | 教务动态 | 科研动态 | 学工动态 |\n| :------: | :------: |:------: | :------: | :------: | :------: |\n|   xwdt   |   tzgg   |  zhbg   |   jxgz   |   kycg   |   xsgz   |",
+        "location": "cec/list.ts"
+      },
       "/gx/card/:column/:id?": {
         "path": "/gx/card/:column/:id?",
         "name": "Unknown",
@@ -48917,9 +50103,11 @@
         "url": "www.iplaysoft.com",
         "maintainers": [
           "williamgateszhao",
-          "cscnk52"
+          "cscnk52",
+          "LokHsu"
         ],
         "example": "/iplaysoft",
+        "parameters": {},
         "categories": [
           "program-update"
         ],
@@ -53699,6 +54887,111 @@
     },
     "lang": "en"
   },
+  "kpopping": {
+    "routes": {
+      "/kpics/:filter{.+}?": {
+        "path": "/kpics/:filter{.+}?",
+        "name": "Pics",
+        "url": "kpopping.com",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/kpopping/kpics/gender-male/category-all/idol-any/group-any/order",
+        "parameters": {
+          "filter": "Filter"
+        },
+        "description": ":::tip\nIf you subscribe to [All male photo albums](https://kpopping.com/kpics/gender-male/category-all/idol-any/group-any/order)，where the URL is `https://kpopping.com/kpics/gender-male/category-all/idol-any/group-any/order`, extract the part `https://kpopping.com/kpics/` to the end, which is `gender-male/category-all/idol-any/group-any/order`, and use it as the parameter to fill in. Therefore, the route will be [`/kpopping/kpics/gender-male/category-all/idol-any/group-any/order`](https://rsshub.app/kpopping/kpics/gender-male/category-all/idol-any/group-any/order).\n:::\n",
+        "categories": [
+          "picture"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "kpopping.com/kpics/:filter"
+            ]
+          }
+        ],
+        "view": 0,
+        "zh": {
+          "path": "/kpics/:filter{.+}?",
+          "name": "Pics",
+          "url": "kpopping.com",
+          "maintainers": [
+            "nczitzk"
+          ],
+          "example": "/kpopping/kpics/gender-male/category-all/idol-any/group-any/order",
+          "parameters": {
+            "filter": "筛选，可在对应分类页 URL 中找到"
+          },
+          "description": ":::tip\n若订阅 [All male photo albums](https://kpopping.com/kpics/gender-male/category-all/idol-any/group-any/order)，网址为 `https://kpopping.com/kpics/gender-male/category-all/idol-any/group-any/order`，请截取 `https://kpopping.com/kpics/` 到末尾的部分 `gender-male/category-all/idol-any/group-any/order` 作为 `filter` 参数填入，此时目标路由为 [`/kpopping/kpics/gender-male/category-all/idol-any/group-any/order`](https://rsshub.app/kpopping/kpics/gender-male/category-all/idol-any/group-any/order)。\n:::\n"
+        },
+        "location": "kpics.ts"
+      },
+      "/news/:filter{.+}?": {
+        "path": "/news/:filter{.+}?",
+        "name": "News",
+        "url": "kpopping.com",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/kpopping/news/gender-all/category-all/idol-any/group-any/order",
+        "parameters": {
+          "filter": "Filter"
+        },
+        "description": ":::tip\nIf you subscribe to [All male articles](https://kpopping.com/news/gender-male/category-all/idol-any/group-any/order)，where the URL is `https://kpopping.com/news/gender-male/category-all/idol-any/group-any/order`, extract the part `https://kpopping.com/news` to the end, which is `gender-male/category-all/idol-any/group-any/order`, and use it as the parameter to fill in. Therefore, the route will be [`/kpopping/news/gender-male/category-all/idol-any/group-any/order`](https://rsshub.app/kpopping/news/gender-male/category-all/idol-any/group-any/order).\n:::\n",
+        "categories": [
+          "new-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "kpopping.com/news/:filter"
+            ]
+          }
+        ],
+        "view": 0,
+        "zh": {
+          "path": "/news/:filter{.+}?",
+          "name": "News",
+          "url": "kpopping.com",
+          "maintainers": [
+            "nczitzk"
+          ],
+          "example": "/kpopping/news/gender-all/category-all/idol-any/group-any/order",
+          "parameters": {
+            "filter": "筛选，可在对应分类页 URL 中找到"
+          },
+          "description": ":::tip\n若订阅 [All male articles](https://kpopping.com/news/gender-male/category-all/idol-any/group-any/order)，网址为 `https://kpopping.com/news/gender-male/category-all/idol-any/group-any/order`，请截取 `https://kpopping.com/news/` 到末尾的部分 `gender-male/category-all/idol-any/group-any/order` 作为 `filter` 参数填入，此时目标路由为 [`/kpopping/news/gender-male/category-all/idol-any/group-any/order`](https://rsshub.app/kpopping/news/gender-male/category-all/idol-any/group-any/order)。\n:::\n"
+        },
+        "location": "news.ts"
+      }
+    },
+    "name": "kpopping",
+    "url": "kpopping.com",
+    "categories": [
+      "new-media"
+    ],
+    "description": "",
+    "lang": "en"
+  },
   "ktown4u": {
     "routes": {
       "/artistBrandlist/:grpNo/:grpNo2?": {
@@ -54791,6 +56084,44 @@
     "url": "join-lemmy.org",
     "lang": "en"
   },
+  "lens": {
+    "routes": {
+      "/profile/:handle": {
+        "path": "/profile/:handle",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/lens/profile/stani",
+        "parameters": {
+          "handle": "Lens handle"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "hey.xyz/u/:handle"
+            ],
+            "target": "/profile/:handle"
+          }
+        ],
+        "name": "Lens Profile",
+        "maintainers": [
+          "DIYgod"
+        ],
+        "location": "profile.ts"
+      }
+    },
+    "name": "Lens",
+    "url": "www.lens.xyz",
+    "lang": "en"
+  },
   "lfsyd": {
     "routes": {
       "/home": {
@@ -55512,31 +56843,6 @@
     "name": "木木博客",
     "url": "liulinblog.com",
     "lang": "zh-CN"
-  },
-  "livestart": {
-    "routes": {
-      "/:city/:keyword?": {
-        "path": "/:city/:keyword?",
-        "categories": [
-          "shopping"
-        ],
-        "example": "/livestart/上海",
-        "parameters": {
-          "city": "城市",
-          "keyword": "关键词"
-        },
-        "name": "演出更新",
-        "maintainers": [
-          "lchtao26"
-        ],
-        "location": "index.ts"
-      }
-    },
-    "name": "LiveStart",
-    "url": "www.livestart.com.cn",
-    "categories": [
-      "shopping"
-    ]
   },
   "liveuamap": {
     "routes": {
@@ -60168,6 +61474,140 @@
     "url": "meituan.com",
     "lang": "zh-CN"
   },
+  "melonbooks": {
+    "routes": {
+      "/search/:query?": {
+        "path": "/search/:query?",
+        "categories": [
+          "anime"
+        ],
+        "example": "/melonbooks/search/name=けいおん",
+        "parameters": {
+          "category": "链接参数，对应网址问号后的内容，不携带问号"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "搜索结果",
+        "maintainers": [
+          "cokemine"
+        ],
+        "description": "::: tip\n如果你期望获取限制级内容，可以添加`&adult_view=1`参数\n:::",
+        "location": "search.ts"
+      }
+    },
+    "name": "メロンブックス",
+    "url": "www.melonbooks.co.jp",
+    "description": "サイン本の同人誌、同人ゲーム、同人音楽、同人グッズの通販は国内最大級、業界最速の萌えいっぱいの総合書店メロンブックスで。同人作品、同人委託の特典付商品も多数あり。直営店舗数も同人業界で最大級。",
+    "lang": "ja",
+    "categories": [
+      "anime"
+    ]
+  },
+  "mercari": {
+    "routes": {
+      "/:sort/:order/:status/:keyword": {
+        "path": "/:sort/:order/:status/:keyword",
+        "categories": [
+          "shopping"
+        ],
+        "parameters": {
+          "sort": {
+            "description": "排序方式",
+            "default": "default",
+            "options": [
+              {
+                "value": "default",
+                "label": "默认排序"
+              },
+              {
+                "value": "create_time",
+                "label": "发布时间"
+              },
+              {
+                "value": "score",
+                "label": "评分"
+              },
+              {
+                "value": "like",
+                "label": "点赞"
+              },
+              {
+                "value": "price",
+                "label": "价格"
+              }
+            ]
+          },
+          "order": {
+            "description": "排序顺序",
+            "default": "desc",
+            "options": [
+              {
+                "value": "desc",
+                "label": "降序"
+              },
+              {
+                "value": "asc",
+                "label": "升序"
+              }
+            ]
+          },
+          "status": {
+            "description": "商品状态",
+            "default": "default",
+            "options": [
+              {
+                "value": "default",
+                "label": "全部"
+              },
+              {
+                "value": "onsale",
+                "label": "在售"
+              },
+              {
+                "value": "soldout",
+                "label": "已售"
+              }
+            ]
+          },
+          "keyword": {
+            "description": "关键词"
+          }
+        },
+        "example": "/mercari/create_time/desc/default/ふもふも",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "关键词",
+        "maintainers": [
+          "yana9i"
+        ],
+        "url": "jp.mercari.com",
+        "location": "keyword.ts"
+      }
+    },
+    "name": "Mercari",
+    "url": "jp.mercari.com",
+    "zh": {
+      "name": "煤炉"
+    },
+    "ja": {
+      "name": "メルカリ"
+    },
+    "zh-TW": {
+      "name": "美露可利"
+    }
+  },
   "metacritic": {
     "routes": {
       "/:type?/:sort?/:filter?": {
@@ -61993,6 +63433,147 @@
     },
     "name": "美麗島電子報",
     "url": "my-formosa.com",
+    "lang": "zh-TW"
+  },
+  "mycard520": {
+    "routes": {
+      "/category/:category?": {
+        "path": "/category/:category?",
+        "name": "遊戲新聞",
+        "url": "app.mycard520.com.tw",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/mycard520/category/cardgame",
+        "parameters": {
+          "category": {
+            "description": "分类，默认为 `cardgame`，即最新遊戲，可在对应分类页 URL 中找到",
+            "options": [
+              {
+                "label": "最新遊戲",
+                "value": "cardgame"
+              },
+              {
+                "label": "手機遊戲",
+                "value": "cardgame-mobile"
+              },
+              {
+                "label": "PC 遊戲",
+                "value": "cardgame-pc"
+              },
+              {
+                "label": "電競賽事",
+                "value": "cardgame-esports"
+              },
+              {
+                "label": "實況直播",
+                "value": "cardgame-live"
+              }
+            ]
+          }
+        },
+        "description": ":::tip\n若订阅 [最新遊戲](https://app.mycard520.com.tw/category/cardgame/)，网址为 `https://app.mycard520.com.tw/category/cardgame/`，请截取 `https://app.mycard520.com.tw/category/` 到末尾 `/` 的部分 `cardgame` 作为 `category` 参数填入，此时目标路由为 [`/mycard520/category/cardgame`](https://rsshub.app/mycard520/category/cardgame)。\n:::\n\n| [最新遊戲](https://app.mycard520.com.tw/category/cardgame/) | [手機遊戲](https://app.mycard520.com.tw/category/cardgame-mobile/)       | [PC 遊戲](https://app.mycard520.com.tw/category/cardgame-pc/)    | [電競賽事](https://app.mycard520.com.tw/category/cardgame-esports/)        | [實況直播](https://app.mycard520.com.tw/category/cardgame-live/)     |\n| ----------------------------------------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------- |\n| [cardgame](https://rsshub.app/mycard520/category/cardgame)  | [cardgame-mobile](https://rsshub.app/mycard520/category/cardgame-mobile) | [cardgame-pc](https://rsshub.app/mycard520/category/cardgame-pc) | [cardgame-esports](https://rsshub.app/mycard520/category/cardgame-esports) | [cardgame-live](https://rsshub.app/mycard520/category/cardgame-live) |\n",
+        "categories": [
+          "game"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "app.mycard520.com.tw/category/:category"
+            ]
+          },
+          {
+            "title": "最新遊戲",
+            "source": [
+              "app.mycard520.com.tw/category/cardgame"
+            ],
+            "target": "/category/cardgame"
+          },
+          {
+            "title": "手機遊戲",
+            "source": [
+              "app.mycard520.com.tw/category/cardgame-mobile"
+            ],
+            "target": "/category/cardgame-mobile"
+          },
+          {
+            "title": "PC 遊戲",
+            "source": [
+              "app.mycard520.com.tw/category/cardgame-pc"
+            ],
+            "target": "/category/cardgame-pc"
+          },
+          {
+            "title": "電競賽事",
+            "source": [
+              "app.mycard520.com.tw/category/cardgame-esports"
+            ],
+            "target": "/category/cardgame-esports"
+          },
+          {
+            "title": "實況直播",
+            "source": [
+              "app.mycard520.com.tw/category/cardgame-live"
+            ],
+            "target": "/category/cardgame-live"
+          }
+        ],
+        "view": 0,
+        "zh": {
+          "path": "/category/:category?",
+          "name": "游戏新闻",
+          "url": "app.mycard520.com.tw",
+          "maintainers": [
+            "nczitzk"
+          ],
+          "example": "/mycard520/category/cardgame",
+          "parameters": {
+            "category": {
+              "description": "分类，默认为 `cardgame`，即最新游戏，可在对应分类页 URL 中找到",
+              "options": [
+                {
+                  "label": "最新游戏",
+                  "value": "cardgame"
+                },
+                {
+                  "label": "手机游戏",
+                  "value": "cardgame-mobile"
+                },
+                {
+                  "label": "PC 游戏",
+                  "value": "cardgame-pc"
+                },
+                {
+                  "label": "电竞赛事",
+                  "value": "cardgame-esports"
+                },
+                {
+                  "label": "实况直播",
+                  "value": "cardgame-live"
+                }
+              ]
+            }
+          },
+          "description": ":::tip\n若订阅 [最新游戏](https://app.mycard520.com.tw/category/cardgame/)，网址为 `https://app.mycard520.com.tw/category/cardgame/`，请截取 `https://app.mycard520.com.tw/category/` 到末尾 `/` 的部分 `cardgame` 作为 `category` 参数填入，此时目标路由为 [`/mycard520/category/cardgame`](https://rsshub.app/mycard520/category/cardgame)。\n:::\n\n| [最新游戏](https://app.mycard520.com.tw/category/cardgame/) | [手机游戏](https://app.mycard520.com.tw/category/cardgame-mobile/)       | [PC 游戏](https://app.mycard520.com.tw/category/cardgame-pc/)    | [电竞赛事](https://app.mycard520.com.tw/category/cardgame-esports/)        | [实况直播](https://app.mycard520.com.tw/category/cardgame-live/)     |\n| ----------------------------------------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------- |\n| [cardgame](https://rsshub.app/mycard520/category/cardgame)  | [cardgame-mobile](https://rsshub.app/mycard520/category/cardgame-mobile) | [cardgame-pc](https://rsshub.app/mycard520/category/cardgame-pc) | [cardgame-esports](https://rsshub.app/mycard520/category/cardgame-esports) | [cardgame-live](https://rsshub.app/mycard520/category/cardgame-live) |\n"
+        },
+        "location": "news.ts"
+      }
+    },
+    "name": "MyCard娛樂中心",
+    "url": "mycard520.com.tw",
+    "categories": [
+      "game"
+    ],
+    "description": "",
     "lang": "zh-TW"
   },
   "mydrivers": {
@@ -67194,6 +68775,102 @@
     },
     "name": "西北农林科技大学",
     "url": "nwafu.edu.cn",
+    "lang": "zh-CN"
+  },
+  "nwnu": {
+    "routes": {
+      "/college/csse/:column": {
+        "path": "/college/csse/:column",
+        "name": "计算机科学与工程学院",
+        "maintainers": [
+          "PrinOrange"
+        ],
+        "categories": [
+          "university"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "example": "/college/csse/2435",
+        "radar": [
+          {
+            "source": [
+              "jsj.nwnu.edu.cn/:column/list"
+            ],
+            "target": "/college/csse/:column"
+          }
+        ],
+        "description": "\n| column | 标题       | 描述                                          |\n| ------ | ---------- | --------------------------------------------- |\n| 2435   | 学院新闻   | 计算机科学与工程 学院新闻                     |\n| 2436   | 通知公告   | 计算机科学与工程 通知公告                     |\n| 2437   | 学术动态   | 计算机科学与工程 学术动态                     |\n| 2446   | 研究生招生 | 计算机科学与工程学院 研究生招生动态及相关新闻 |\n| 8411   | 评估动态   | 计算机科学与工程学院 院系学科评估动态         |",
+        "location": "routes/college/csse.ts"
+      },
+      "/department/academic-affairs/:column": {
+        "path": "/department/academic-affairs/:column",
+        "name": "教务处",
+        "maintainers": [
+          "PrinOrange"
+        ],
+        "categories": [
+          "university"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportRadar": true,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "example": "/department/academic-affairs/tzgg",
+        "radar": [
+          {
+            "source": [
+              "jwc.nwnu.edu.cn/:column/list.htm"
+            ],
+            "target": "/department/academic-affairs/:column"
+          }
+        ],
+        "description": "\n| column | 标题     | 描述                     |\n| ------ | -------- | ------------------------ |\n| tzgg   | 通知公告 | 西北师范大学教务通知公告 |\n| jwkx   | 教务快讯 | 西北师范大学教务快讯     |",
+        "location": "routes/department/academic-affairs.ts"
+      },
+      "/department/postgraduate/:column": {
+        "path": "/department/postgraduate/:column",
+        "name": "研究生院",
+        "maintainers": [
+          "PrinOrange"
+        ],
+        "categories": [
+          "university"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportRadar": true,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "example": "/department/postgraduate/2701",
+        "radar": [
+          {
+            "source": [
+              "yjsy.nwnu.edu.cn/:column/list.htm"
+            ],
+            "target": "/department/postgraduate/:column"
+          }
+        ],
+        "description": "\n| column | 标题                           | 描述                                               |\n| ------ | ------------------------------ | -------------------------------------------------- |\n| 2701   | 招生工作（包括硕士、博士招生） | 研究生院招生信息（包含硕士招生和博士招生两个栏目） |\n| 2712   | 博士招生                       | 研究生院博士研究生招生信息                         |\n| 2713   | 硕士招生                       | 研究生院硕士研究生招生信息                         |\n| 2702   | 培养工作                       | 培养工作栏目信息汇总                               |\n| 2703   | 学科建设                       | 研究生院学科建设信息汇总                           |\n| 2704   | 学位工作                       | 研究生院学位工作栏目信息汇总                       |",
+        "location": "routes/department/postgraduate.ts"
+      }
+    },
+    "name": "西北师范大学",
+    "url": "www.nwnu.edu.cn",
     "lang": "zh-CN"
   },
   "nyaa": {
@@ -73774,6 +75451,119 @@
     "url": "www.playstation.com",
     "lang": "en"
   },
+  "psnine": {
+    "routes": {
+      "/game": {
+        "path": "/game",
+        "categories": [
+          "game"
+        ],
+        "example": "/psnine/game",
+        "name": "游戏",
+        "maintainers": [
+          "betta-cyber"
+        ],
+        "radar": [
+          {
+            "source": [
+              "psnine.com/psngame",
+              "psnine.com"
+            ]
+          }
+        ],
+        "location": "game.ts"
+      },
+      "/": {
+        "path": "/",
+        "categories": [
+          "game"
+        ],
+        "example": "/psnine",
+        "name": "首页",
+        "maintainers": [
+          "betta-cyber"
+        ],
+        "radar": [
+          {
+            "source": [
+              "psnine.com"
+            ]
+          }
+        ],
+        "location": "index.ts"
+      },
+      "/node/:id?/:order?": {
+        "path": "/node/:id?/:order?",
+        "parameters": {
+          "id": "节点 id，见下表，默认为 news",
+          "order": "排序，`date` 即最新，默认为 `obdate` 即综合排序"
+        },
+        "categories": [
+          "game"
+        ],
+        "example": "/psnine/node/news",
+        "name": "节点",
+        "maintainers": [
+          "betta-cyber",
+          "nczitzk"
+        ],
+        "radar": [
+          {
+            "source": [
+              "psnine.com/node/:id"
+            ]
+          }
+        ],
+        "location": "node.ts"
+      },
+      "/shuzhe": {
+        "path": "/shuzhe",
+        "categories": [
+          "game"
+        ],
+        "example": "/psnine/shuzhe",
+        "name": "数折",
+        "maintainers": [
+          "betta-cyber"
+        ],
+        "radar": [
+          {
+            "source": [
+              "psnine.com/dd",
+              "psnine.com"
+            ]
+          }
+        ],
+        "location": "shuzhe.ts"
+      },
+      "/trade": {
+        "path": "/trade",
+        "categories": [
+          "game"
+        ],
+        "example": "/psnine/trade",
+        "name": "闲游",
+        "maintainers": [
+          "betta-cyber"
+        ],
+        "radar": [
+          {
+            "source": [
+              "psnine.com/trade",
+              "psnine.com"
+            ]
+          }
+        ],
+        "location": "trade.ts"
+      }
+    },
+    "name": "PSN 中文站",
+    "url": "psnine.com",
+    "lang": "zh-CN",
+    "categories": [
+      "game"
+    ]
+  },
   "psyche": {
     "routes": {
       "/topic/:topic": {
@@ -76266,6 +78056,48 @@
     "url": "rarehistoricalphotos.com",
     "lang": "en"
   },
+  "raspberrypi": {
+    "routes": {
+      "/magazine": {
+        "path": "/magazine",
+        "name": "Official Magazine",
+        "url": "magazine.raspberrypi.com",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/raspberrypi/magazine",
+        "categories": [
+          "programming"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "magazine.raspberrypi.com"
+            ],
+            "target": "/raspberrypi/magazine"
+          }
+        ],
+        "view": 0,
+        "location": "magazine.ts"
+      }
+    },
+    "name": "Raspberry Pi",
+    "url": "raspberrypi.com",
+    "categories": [
+      "programming"
+    ],
+    "description": "",
+    "lang": "en"
+  },
   "rattibha": {
     "routes": {
       "/user/:user": {
@@ -77991,6 +79823,37 @@
         "url": "sciencedirect.com/browse/calls-for-papers",
         "description": "`sciencedirect.com/browse/calls-for-papers?subject=education` -> `/sciencedirect/call-for-paper/education`",
         "location": "call-for-paper.ts"
+      },
+      "/journal/:id/current": {
+        "path": "/journal/:id/current",
+        "categories": [
+          "journal"
+        ],
+        "example": "/sciencedirect/journal/journal-of-financial-economics/current",
+        "parameters": {
+          "id": "Journal id, can be found in URL"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "sciencedirect.com/journal/:id",
+              "sciencedirect.com/"
+            ]
+          }
+        ],
+        "name": "Current Issue",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "location": "current-issue.ts"
       },
       "/journal/:id": {
         "path": "/journal/:id",
@@ -83511,6 +85374,7 @@
           "supportPodcast": false,
           "supportScihub": false
         },
+        "description": "::: warning\nDue to [limitations by Spotify](https://developer.spotify.com/blog/2024-11-27-changes-to-the-web-api), this endpoint is unable to access \"Algorithmic and Spotify-owned editorial playlists\".\n:::",
         "radar": [
           {
             "source": [
@@ -85027,6 +86891,177 @@
         ],
         "view": 0,
         "location": "kx.ts"
+      },
+      "/article/rank/:id?": {
+        "path": "/article/rank/:id?",
+        "name": "热榜",
+        "url": "www.stcn.com",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/stcn/article/rank/yw",
+        "parameters": {
+          "category": {
+            "description": "分类，默认为 `yw`，即要闻，可在对应分类页 URL 中找到",
+            "options": [
+              {
+                "label": "要闻",
+                "value": "yw"
+              },
+              {
+                "label": "股市",
+                "value": "gs"
+              },
+              {
+                "label": "公司",
+                "value": "company"
+              },
+              {
+                "label": "基金",
+                "value": "fund"
+              },
+              {
+                "label": "金融",
+                "value": "finance"
+              },
+              {
+                "label": "评论",
+                "value": "comment"
+              },
+              {
+                "label": "产经",
+                "value": "cj"
+              },
+              {
+                "label": "科创板",
+                "value": "kcb"
+              },
+              {
+                "label": "新三板",
+                "value": "xsb"
+              },
+              {
+                "label": "ESG",
+                "value": "zk"
+              },
+              {
+                "label": "滚动",
+                "value": "gd"
+              }
+            ]
+          }
+        },
+        "description": ":::tip\n若订阅 [要闻](https://www.stcn.com/article/list/yw.html)，网址为 `https://www.stcn.com/article/list/yw.html`，请截取 `https://www.stcn.com/article/list/` 到末尾 `.html` 的部分 `yw` 作为 `id` 参数填入，此时目标路由为 [`/stcn/article/rank/yw`](https://rsshub.app/stcn/article/rank/yw)。\n\n:::\n\n| 要闻 | 股市 | 公司    | 基金 | 金融    | 评论    |\n| ---- | ---- | ------- | ---- | ------- | ------- |\n| yw   | gs   | company | fund | finance | comment |\n\n| 产经 | 科创板 | 新三板 | ESG | 滚动 |\n| ---- | ------ | ------ | --- | ---- |\n| cj   | kcb    | xsb    | zk  | gd   |\n",
+        "categories": [
+          "finance"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.stcn.com/article/list.html",
+              "www.stcn.com/article/list/:id"
+            ]
+          },
+          {
+            "title": "要闻",
+            "source": [
+              "www.stcn.com/article/list.html",
+              "www.stcn.com/article/list/yw.html"
+            ],
+            "target": "/article/rank/yw"
+          },
+          {
+            "title": "股市",
+            "source": [
+              "www.stcn.com/article/list.html",
+              "www.stcn.com/article/list/gs.html"
+            ],
+            "target": "/article/rank/gs"
+          },
+          {
+            "title": "公司",
+            "source": [
+              "www.stcn.com/article/list.html",
+              "www.stcn.com/article/list/company.html"
+            ],
+            "target": "/article/rank/company"
+          },
+          {
+            "title": "基金",
+            "source": [
+              "www.stcn.com/article/list.html",
+              "www.stcn.com/article/list/fund.html"
+            ],
+            "target": "/article/rank/fund"
+          },
+          {
+            "title": "金融",
+            "source": [
+              "www.stcn.com/article/list.html",
+              "www.stcn.com/article/list/finance.html"
+            ],
+            "target": "/article/rank/finance"
+          },
+          {
+            "title": "评论",
+            "source": [
+              "www.stcn.com/article/list.html",
+              "www.stcn.com/article/list/comment.html"
+            ],
+            "target": "/article/rank/comment"
+          },
+          {
+            "title": "产经",
+            "source": [
+              "www.stcn.com/article/list.html",
+              "www.stcn.com/article/list/cj.html"
+            ],
+            "target": "/article/rank/cj"
+          },
+          {
+            "title": "科创板",
+            "source": [
+              "www.stcn.com/article/list.html",
+              "www.stcn.com/article/list/kcb.html"
+            ],
+            "target": "/article/rank/kcb"
+          },
+          {
+            "title": "新三板",
+            "source": [
+              "www.stcn.com/article/list.html",
+              "www.stcn.com/article/list/xsb.html"
+            ],
+            "target": "/article/rank/xsb"
+          },
+          {
+            "title": "ESG",
+            "source": [
+              "www.stcn.com/article/list.html",
+              "www.stcn.com/article/list/zk.html"
+            ],
+            "target": "/article/rank/zk"
+          },
+          {
+            "title": "滚动",
+            "source": [
+              "www.stcn.com/article/list.html",
+              "www.stcn.com/article/list/gd.html"
+            ],
+            "target": "/article/rank/gd"
+          }
+        ],
+        "view": 0,
+        "location": "rank.ts"
       }
     },
     "name": "证券时报网",
@@ -93736,6 +95771,34 @@
     "url": "www.transcriptforest.com",
     "lang": "en"
   },
+  "transformer-circuits": {
+    "routes": {
+      "/": {
+        "path": "/",
+        "categories": [
+          "programming"
+        ],
+        "example": "/transformer-circuits",
+        "parameters": {},
+        "radar": [
+          {
+            "source": [
+              "transformer-circuits.pub/"
+            ],
+            "target": "/"
+          }
+        ],
+        "name": "Articles",
+        "maintainers": [
+          "shinmohuang"
+        ],
+        "location": "index.ts"
+      }
+    },
+    "name": "Transformer Circuits",
+    "url": "transformer-circuits.pub",
+    "lang": "en"
+  },
   "trending": {
     "routes": {
       "/:keywords/:numberOfDays?": {
@@ -94537,7 +96600,7 @@
         "example": "/twitter/user/_RSSHub",
         "parameters": {
           "id": "username; in particular, if starts with `+`, it will be recognized as a [unique ID](https://github.com/DIYgod/RSSHub/issues/12221), e.g. `+44196397`",
-          "routeParams": "extra parameters, see the table above; particularly when `routeParams=exclude_replies`, replies are excluded; `routeParams=exclude_rts` excludes retweets,`routeParams=exclude_rts_replies` exclude replies and retweets; for default include all."
+          "routeParams": "extra parameters, see the table above"
         },
         "features": {
           "requireConfig": [
@@ -94591,7 +96654,7 @@
     },
     "name": "X (Twitter)",
     "url": "x.com",
-    "description": "Specify options (in the format of query string) in parameter `routeParams` to control some extra features for Tweets\n\n| Key                            | Description                                                                                                                          | Accepts                | Defaults to                               |\n| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ----------------------------------------- |\n| `readable`                     | Enable readable layout                                                                                                               | `0`/`1`/`true`/`false` | `false`                                   |\n| `authorNameBold`               | Display author name in bold                                                                                                          | `0`/`1`/`true`/`false` | `false`                                   |\n| `showAuthorInTitle`            | Show author name in title                                                                                                            | `0`/`1`/`true`/`false` | `false` (`true` in `/twitter/followings`) |\n| `showAuthorAsTitleOnly`        | Show only author name as title                                                                                                            | `0`/`1`/`true`/`false` | `false`                                   |\n| `showAuthorInDesc`             | Show author name in description (RSS body)                                                                                           | `0`/`1`/`true`/`false` | `false` (`true` in `/twitter/followings`) |\n| `showQuotedAuthorAvatarInDesc` | Show avatar of quoted Tweet's author in description (RSS body) (Not recommended if your RSS reader extracts images from description) | `0`/`1`/`true`/`false` | `false`                                   |\n| `showAuthorAvatarInDesc`       | Show avatar of author in description (RSS body) (Not recommended if your RSS reader extracts images from description)                | `0`/`1`/`true`/`false` | `false`                                   |\n| `showEmojiForRetweetAndReply`  | Use \"🔁\" instead of \"RT\", \"↩️\" & \"💬\" instead of \"Re\"                                                                                | `0`/`1`/`true`/`false` | `false`                                   |\n| `showSymbolForRetweetAndReply` | Use \" RT \" instead of \"\", \" Re \" instead of \"\"                                                                                       | `0`/`1`/`true`/`false` | `true`                                    |\n| `showRetweetTextInTitle`       | Show quote comments in title (if `false`, only the retweeted tweet will be shown in the title)                                       | `0`/`1`/`true`/`false` | `true`                                    |\n| `addLinkForPics`               | Add clickable links for Tweet pictures                                                                                               | `0`/`1`/`true`/`false` | `false`                                   |\n| `showTimestampInDescription`   | Show timestamp in description                                                                                                        | `0`/`1`/`true`/`false` | `false`                                   |\n| `showQuotedInTitle`            | Show quoted tweet in title                                                                                                           | `0`/`1`/`true`/`false` | `false`                                   |\n| `widthOfPics`                  | Width of Tweet pictures                                                                                                              | Unspecified/Integer    | Unspecified                               |\n| `heightOfPics`                 | Height of Tweet pictures                                                                                                             | Unspecified/Integer    | Unspecified                               |\n| `sizeOfAuthorAvatar`           | Size of author's avatar                                                                                                              | Integer                | `48`                                      |\n| `sizeOfQuotedAuthorAvatar`     | Size of quoted tweet's author's avatar                                                                                               | Integer                | `24`                                      |\n| `excludeReplies`               | Exclude replies, only available in `/twitter/user`                                                                                   | `0`/`1`/`true`/`false` | `false`                                   |\n| `includeRts`                   | Include retweets, only available in `/twitter/user`                                                                                  | `0`/`1`/`true`/`false` | `true`                                    |\n| `forceWebApi`                  | Force using Web API even if Developer API is configured, only available in `/twitter/user` and `/twitter/keyword`                    | `0`/`1`/`true`/`false` | `false`                                   |\n| `count`                        | `count` parameter passed to Twitter API, only available in `/twitter/user`                                                           | Unspecified/Integer    | Unspecified                               |\n| `onlyMedia`                    | Only get tweets with a media                                                                                                             | `0`/`1`/`true`/`false` | `false`                 |\n\nSpecify different option values than default values to improve readability. The URL\n\n```\nhttps://rsshub.app/twitter/user/durov/readable=1&authorNameBold=1&showAuthorInTitle=1&showAuthorInDesc=1&showQuotedAuthorAvatarInDesc=1&showAuthorAvatarInDesc=1&showEmojiForRetweetAndReply=1&showRetweetTextInTitle=0&addLinkForPics=1&showTimestampInDescription=1&showQuotedInTitle=1&heightOfPics=150\n```\n\ngenerates\n\n<img loading=\"lazy\" src=\"/img/readable-twitter.png\" alt=\"Readable Twitter RSS of Durov\" />\n\nCurrently supports two authentication methods:\n\n- Using `TWITTER_AUTH_TOKEN` (recommended): Configure a comma-separated list of `auth_token` cookies of logged-in Twitter Web. RSSHub will use this information to directly access Twitter's web API to obtain data.\n\n- Using `TWITTER_USERNAME` `TWITTER_PASSWORD` and `TWITTER_AUTHENTICATION_SECRET`: Configure a comma-separated list of Twitter username and password. RSSHub will use this information to log in to Twitter and obtain data using the mobile API. Please note that if you have not logged in with the current IP address before, it is easy to trigger Twitter's risk control mechanism.\n",
+    "description": "Specify options (in the format of query string) in parameter `routeParams` to control some extra features for Tweets\n\n| Key                            | Description                                                                                                                          | Accepts                | Defaults to                               |\n| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ----------------------------------------- |\n| `readable`                     | Enable readable layout                                                                                                               | `0`/`1`/`true`/`false` | `false`                                   |\n| `authorNameBold`               | Display author name in bold                                                                                                          | `0`/`1`/`true`/`false` | `false`                                   |\n| `showAuthorInTitle`            | Show author name in title                                                                                                            | `0`/`1`/`true`/`false` | `false` (`true` in `/twitter/followings`) |\n| `showAuthorAsTitleOnly`        | Show only author name as title                                                                                                            | `0`/`1`/`true`/`false` | `false`                                   |\n| `showAuthorInDesc`             | Show author name in description (RSS body)                                                                                           | `0`/`1`/`true`/`false` | `false` (`true` in `/twitter/followings`) |\n| `showQuotedAuthorAvatarInDesc` | Show avatar of quoted Tweet's author in description (RSS body) (Not recommended if your RSS reader extracts images from description) | `0`/`1`/`true`/`false` | `false`                                   |\n| `showAuthorAvatarInDesc`       | Show avatar of author in description (RSS body) (Not recommended if your RSS reader extracts images from description)                | `0`/`1`/`true`/`false` | `false`                                   |\n| `showEmojiForRetweetAndReply`  | Use \"🔁\" instead of \"RT\", \"↩️\" & \"💬\" instead of \"Re\"                                                                                | `0`/`1`/`true`/`false` | `false`                                   |\n| `showSymbolForRetweetAndReply` | Use \" RT \" instead of \"\", \" Re \" instead of \"\"                                                                                       | `0`/`1`/`true`/`false` | `true`                                    |\n| `showRetweetTextInTitle`       | Show quote comments in title (if `false`, only the retweeted tweet will be shown in the title)                                       | `0`/`1`/`true`/`false` | `true`                                    |\n| `addLinkForPics`               | Add clickable links for Tweet pictures                                                                                               | `0`/`1`/`true`/`false` | `false`                                   |\n| `showTimestampInDescription`   | Show timestamp in description                                                                                                        | `0`/`1`/`true`/`false` | `false`                                   |\n| `showQuotedInTitle`            | Show quoted tweet in title                                                                                                           | `0`/`1`/`true`/`false` | `false`                                   |\n| `widthOfPics`                  | Width of Tweet pictures                                                                                                              | Unspecified/Integer    | Unspecified                               |\n| `heightOfPics`                 | Height of Tweet pictures                                                                                                             | Unspecified/Integer    | Unspecified                               |\n| `sizeOfAuthorAvatar`           | Size of author's avatar                                                                                                              | Integer                | `48`                                      |\n| `sizeOfQuotedAuthorAvatar`     | Size of quoted tweet's author's avatar                                                                                               | Integer                | `24`                                      |\n| `includeReplies`               | Include replies, only available in `/twitter/user`                                                                                   | `0`/`1`/`true`/`false` | `false`                                   |\n| `includeRts`                   | Include retweets, only available in `/twitter/user`                                                                                  | `0`/`1`/`true`/`false` | `true`                                    |\n| `forceWebApi`                  | Force using Web API even if Developer API is configured, only available in `/twitter/user` and `/twitter/keyword`                    | `0`/`1`/`true`/`false` | `false`                                   |\n| `count`                        | `count` parameter passed to Twitter API, only available in `/twitter/user`                                                           | Unspecified/Integer    | Unspecified                               |\n| `onlyMedia`                    | Only get tweets with a media                                                                                                             | `0`/`1`/`true`/`false` | `false`                 |\n\nSpecify different option values than default values to improve readability. The URL\n\n```\nhttps://rsshub.app/twitter/user/durov/readable=1&authorNameBold=1&showAuthorInTitle=1&showAuthorInDesc=1&showQuotedAuthorAvatarInDesc=1&showAuthorAvatarInDesc=1&showEmojiForRetweetAndReply=1&showRetweetTextInTitle=0&addLinkForPics=1&showTimestampInDescription=1&showQuotedInTitle=1&heightOfPics=150\n```\n\ngenerates\n\n<img loading=\"lazy\" src=\"/img/readable-twitter.png\" alt=\"Readable Twitter RSS of Durov\" />\n\nCurrently supports two authentication methods:\n\n- Using `TWITTER_AUTH_TOKEN` (recommended): Configure a comma-separated list of `auth_token` cookies of logged-in Twitter Web. RSSHub will use this information to directly access Twitter's web API to obtain data.\n\n- Using `TWITTER_USERNAME` `TWITTER_PASSWORD` and `TWITTER_AUTHENTICATION_SECRET`: Configure a comma-separated list of Twitter username and password. RSSHub will use this information to log in to Twitter and obtain data using the mobile API. Please note that if you have not logged in with the current IP address before, it is easy to trigger Twitter's risk control mechanism.\n",
     "lang": "en"
   },
   "twreporter": {
@@ -95617,6 +97680,45 @@
     "name": "乌拉邦",
     "url": "www.ulapia.com",
     "lang": "zh-CN"
+  },
+  "unipd": {
+    "routes": {
+      "/ilbolive/news": {
+        "path": "/ilbolive/news",
+        "name": "Il Bo Live - News",
+        "url": "ilbolive.unipd.it/it/news",
+        "maintainers": [
+          "Gexi0619"
+        ],
+        "example": "/unipd/ilbolive/news",
+        "parameters": {},
+        "description": "Il Bo Live - News",
+        "categories": [
+          "university"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "ilbolive.unipd.it/it/news"
+            ],
+            "target": "/ilbolive/news"
+          }
+        ],
+        "location": "ilbolive/news.ts"
+      }
+    },
+    "name": "Università di Padova",
+    "url": "unipd.it",
+    "lang": "it"
   },
   "uniqlo": {
     "routes": {
@@ -104163,9 +106265,10 @@
         },
         "name": "游研社 - 分类文章",
         "maintainers": [
-          "LightStrawberry"
+          "betta-cyber",
+          "dousha"
         ],
-        "description": "| 推游      | 游戏史  | 大事件 | 文化    | 趣闻 | 经典回顾 |\n| --------- | ------- | ------ | ------- | ---- | -------- |\n| recommend | history | big    | culture | news | retro    |",
+        "description": "| 推游      | 游戏史  | 大事件 | 文化    | 趣闻 | 经典回顾 | 业界     |\n| --------- | ------- | ------ | ------- | ---- | -------- | -------- |\n| recommend | history | big    | culture | news | retro    | industry |",
         "location": "category.ts"
       },
       "/docs": {
