@@ -4416,6 +4416,24 @@
   "/layoffs/": [
     "BrandNewLifeJackie26"
   ],
+  "/lchtao26/douban-monthly-books": [
+    "lchtao26"
+  ],
+  "/lchtao26/duozhuayu-category-books/:categoryId/:subCategoryId?": [
+    "lchtao26"
+  ],
+  "/lchtao26/duozhuayu-chart-books/:id": [
+    "lchtao26"
+  ],
+  "/lchtao26/duozhuayu-clothes/:keyword": [
+    "lchtao26"
+  ],
+  "/lchtao26/duozhuayu-tag-books/:id": [
+    "lchtao26"
+  ],
+  "/lchtao26/livehouse-shows/:city/:keyword?": [
+    "lchtao26"
+  ],
   "/leagueoflegends/patch-notes": [
     "noahm"
   ],
