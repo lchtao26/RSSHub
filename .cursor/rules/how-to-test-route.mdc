@@ -1,0 +1,23 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Testing Routes in RSSHub
+
+## Identifying the Route
+1. Ask the user which route they want to test if not specified
+2. Users may provide either a route file or a route path
+3. When given a route file, examine its content to find the test path (typically in the `example` field)
+
+## Testing Process
+1. First verify the local server is running by checking `localhost:1200`
+2. Test the route by visiting `localhost:1200/{route_path}`
+3. Success: Page displays an RSS feed response
+4. Failure: Investigate issues and fix the code
+
+## Managing the Server
+1. Start server: `pnpm run dev`
+2. When restarting: kill the current process first, then restart
+3. Wait for initialization (look for "RSSHub is running on port" in terminal output)
+4. After code changes, always restart the server and test again

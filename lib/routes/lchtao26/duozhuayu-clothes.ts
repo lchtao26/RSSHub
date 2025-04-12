@@ -22,7 +22,7 @@ export const route: Route = {
     handler: async (ctx) => {
         const keyword = ctx.req.param('keyword');
         const baseUrl = 'https://www.duozhuayu.com';
-        const link = `${baseUrl}/search/clothing/${keyword}`;
+        const link = `${baseUrl}/search/clothing/${keyword}?genderList=male`;
 
         const browser = await puppeteer();
         const page = await browser.newPage();

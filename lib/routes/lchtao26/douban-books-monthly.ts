@@ -6,9 +6,9 @@ import { render } from './book/render';
 const baseUrl = 'https://m.douban.com';
 
 export const route: Route = {
-    path: '/douban-monthly-books',
+    path: '/douban-books-monthly',
     categories: ['social-media', 'reading'],
-    example: '/lchtao26/douban-monthly-books',
+    example: '/lchtao26/douban-books-monthly',
     parameters: {},
     features: {
         requireConfig: false,

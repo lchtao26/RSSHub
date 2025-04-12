@@ -5,9 +5,9 @@ import { Book } from './book/interface';
 import { render } from './book/render';
 
 export const route: Route = {
-    path: '/duozhuayu-category-books/:categoryId/:subCategoryId?',
+    path: '/duozhuayu-books-by-category/:categoryId/:subCategoryId?',
     categories: ['shopping', 'reading'],
-    example: '/lchtao26/duozhuayu-category-books/750409452376692948/767083323578261442',
+    example: '/lchtao26/duozhuayu-books-by-category/750409452376692948/767083323578261442',
     parameters: {
         categoryId: '分类 ID，可在 URL 中找到',
         subCategoryId: '子分类 ID，可在 URL 中找到，可选',
