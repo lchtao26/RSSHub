@@ -55724,13 +55724,13 @@
   },
   "lchtao26": {
     "routes": {
-      "/douban-monthly-books": {
-        "path": "/douban-monthly-books",
+      "/douban-books-monthly": {
+        "path": "/douban-books-monthly",
         "categories": [
           "social-media",
           "reading"
         ],
-        "example": "/lchtao26/douban-monthly-books",
+        "example": "/lchtao26/douban-books-monthly",
         "parameters": {},
         "features": {
           "requireConfig": false,
@@ -55744,15 +55744,15 @@
         "maintainers": [
           "lchtao26"
         ],
-        "location": "douban-monthly-books.ts"
+        "location": "douban-books-monthly.ts"
       },
-      "/duozhuayu-category-books/:categoryId/:subCategoryId?": {
-        "path": "/duozhuayu-category-books/:categoryId/:subCategoryId?",
+      "/duozhuayu-books-by-category/:categoryId/:subCategoryId?": {
+        "path": "/duozhuayu-books-by-category/:categoryId/:subCategoryId?",
         "categories": [
           "shopping",
           "reading"
         ],
-        "example": "/lchtao26/duozhuayu-category-books/750409452376692948/767083323578261442",
+        "example": "/lchtao26/duozhuayu-books-by-category/750409452376692948/767083323578261442",
         "parameters": {
           "categoryId": "分类 ID，可在 URL 中找到",
           "subCategoryId": "子分类 ID，可在 URL 中找到，可选"
@@ -55769,15 +55769,15 @@
         "maintainers": [
           "lchtao26"
         ],
-        "location": "duozhuayu-category-books.ts"
+        "location": "duozhuayu-books-by-category.ts"
       },
-      "/duozhuayu-chart-books/:id": {
-        "path": "/duozhuayu-chart-books/:id",
+      "/duozhuayu-books-by-chart/:id": {
+        "path": "/duozhuayu-books-by-chart/:id",
         "categories": [
           "shopping",
           "reading"
         ],
-        "example": "/lchtao26/duozhuayu-chart-books/765988201625163649",
+        "example": "/lchtao26/duozhuayu-books-by-chart/765988201625163649",
         "parameters": {
           "id": "榜单 ID，可在 URL 中找到"
         },
@@ -55793,7 +55793,55 @@
         "maintainers": [
           "lchtao26"
         ],
-        "location": "duozhuayu-chart-books.ts"
+        "location": "duozhuayu-books-by-chart.ts"
+      },
+      "/duozhuayu-books-by-keyword/:keyword?": {
+        "path": "/duozhuayu-books-by-keyword/:keyword?",
+        "categories": [
+          "shopping",
+          "reading"
+        ],
+        "example": "/lchtao26/duozhuayu-books-by-keyword",
+        "parameters": {
+          "keyword": "搜索关键词，默认为空"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": true,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "多抓鱼书籍",
+        "maintainers": [
+          "lchtao26"
+        ],
+        "location": "duozhuayu-books-by-keyword.ts"
+      },
+      "/duozhuayu-books-by-tag/:id": {
+        "path": "/duozhuayu-books-by-tag/:id",
+        "categories": [
+          "shopping",
+          "reading"
+        ],
+        "example": "/lchtao26/duozhuayu-books-by-tag/960494709850119556",
+        "parameters": {
+          "id": "标签 ID，可在 URL 中找到"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": true,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "多抓鱼标签书籍",
+        "maintainers": [
+          "lchtao26"
+        ],
+        "location": "duozhuayu-books-by-tag.ts"
       },
       "/duozhuayu-clothes/:keyword": {
         "path": "/duozhuayu-clothes/:keyword",
@@ -55817,30 +55865,6 @@
           "lchtao26"
         ],
         "location": "duozhuayu-clothes.ts"
-      },
-      "/duozhuayu-tag-books/:id": {
-        "path": "/duozhuayu-tag-books/:id",
-        "categories": [
-          "shopping",
-          "reading"
-        ],
-        "example": "/lchtao26/duozhuayu-tag-books/960494709850119556",
-        "parameters": {
-          "id": "标签 ID，可在 URL 中找到"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": true,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "name": "多抓鱼标签书籍",
-        "maintainers": [
-          "lchtao26"
-        ],
-        "location": "duozhuayu-tag-books.ts"
       },
       "/livehouse-shows/:city/:keyword?": {
         "path": "/livehouse-shows/:city/:keyword?",

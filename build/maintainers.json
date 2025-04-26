@@ -4416,19 +4416,22 @@
   "/layoffs/": [
     "BrandNewLifeJackie26"
   ],
-  "/lchtao26/douban-monthly-books": [
+  "/lchtao26/douban-books-monthly": [
     "lchtao26"
   ],
-  "/lchtao26/duozhuayu-category-books/:categoryId/:subCategoryId?": [
+  "/lchtao26/duozhuayu-books-by-category/:categoryId/:subCategoryId?": [
     "lchtao26"
   ],
-  "/lchtao26/duozhuayu-chart-books/:id": [
+  "/lchtao26/duozhuayu-books-by-chart/:id": [
+    "lchtao26"
+  ],
+  "/lchtao26/duozhuayu-books-by-keyword/:keyword?": [
+    "lchtao26"
+  ],
+  "/lchtao26/duozhuayu-books-by-tag/:id": [
     "lchtao26"
   ],
   "/lchtao26/duozhuayu-clothes/:keyword": [
-    "lchtao26"
-  ],
-  "/lchtao26/duozhuayu-tag-books/:id": [
     "lchtao26"
   ],
   "/lchtao26/livehouse-shows/:city/:keyword?": [
