@@ -5384,6 +5384,21 @@
   "/layoffs/": [
     "BrandNewLifeJackie26"
   ],
+  "/lchtao26/douban-books-monthly": [
+    "lchtao26"
+  ],
+  "/lchtao26/duozhuayu-books-by-category/:categoryId/:subCategoryId?": [
+    "lchtao26"
+  ],
+  "/lchtao26/duozhuayu-books-by-chart/:id": [
+    "lchtao26"
+  ],
+  "/lchtao26/duozhuayu-books-by-keyword/:keyword?": [
+    "lchtao26"
+  ],
+  "/lchtao26/duozhuayu-books-by-tag/:id": [
+    "lchtao26"
+  ],
   "/leagueoflegends/patch-notes": [
     "noahm"
   ],

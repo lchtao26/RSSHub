@@ -1744,6 +1744,11 @@ export type RoutePath =
   | `/last-origin/news`
   | `/latepost/:proma?`
   | `/layoffs/`
+  | `/lchtao26/douban-books-monthly`
+  | `/lchtao26/duozhuayu-books-by-category/:categoryId/:subCategoryId?`
+  | `/lchtao26/duozhuayu-books-by-chart/:id`
+  | `/lchtao26/duozhuayu-books-by-keyword/:keyword?`
+  | `/lchtao26/duozhuayu-books-by-tag/:id`
   | `/leagueoflegends/patch-notes`
   | `/learnblockchain/posts/:cid/:sort?`
   | `/learnku/:community/:category?`
