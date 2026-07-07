@@ -437,6 +437,9 @@ importers:
       oxlint-tsgolint:
         specifier: 0.24.0
         version: 0.24.0
+      portless:
+        specifier: ^0.15.1
+        version: 0.15.1
       remark:
         specifier: 15.0.1
         version: 15.0.1
@@ -3253,7 +3256,7 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
 
   difflib@https://codeload.github.com/postlight/difflib.js/tar.gz/32e8e38c7fcd935241b9baab71bb432fd9b166ed:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/postlight/difflib.js/tar.gz/32e8e38c7fcd935241b9baab71bb432fd9b166ed}
+    resolution: {gitHosted: true, integrity: sha512-OG2C++3YYIzflFjA9irnexBs9eUS6KUOViAssV4oSo4W8HAl86TV+DoFYhdSXVaFd4z5htsM3zzs64WJybH4cQ==, tarball: https://codeload.github.com/postlight/difflib.js/tar.gz/32e8e38c7fcd935241b9baab71bb432fd9b166ed}
     version: 0.2.6
 
   discord-api-types@0.38.49:
@@ -4875,6 +4878,12 @@ packages:
   pluralize@8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
+
+  portless@0.15.1:
+    resolution: {integrity: sha512-MQTt405HrcIa3m9OSKpH6WjJDbfNP4oFMNg0VzAoUO4B19l1eFJBFcSWfQY8KYMhzZVfa+Gea2OUrlDm8+/M4A==}
+    engines: {node: '>=24'}
+    os: [darwin, linux, win32]
+    hasBin: true
 
   postcss@8.5.16:
     resolution: {integrity: sha512-vuwillviilfKZsg0VGj5R/YwwcHx4SLsIOI/7K6mQkWx+l5cUHTjj5g0AasTBcyXsbfTgrwsUNmVUb5xVwyPwg==}
@@ -10388,6 +10397,8 @@ snapshots:
       thread-stream: 4.2.0
 
   pluralize@8.0.0: {}
+
+  portless@0.15.1: {}
 
   postcss@8.5.16:
     dependencies:
